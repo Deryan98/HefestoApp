@@ -32,10 +32,8 @@ function SubCatTabs({route}) {
       
     }}
     screenOptions={({route}) => ({
-      
       //configurando el icono para cada categoría.
       tabBarIcon: ({color, size}) => {
-        
         //Encontrando la Subcategoría
         let scategory = SUBCATEGORIES.find((subCat) => subCat.title === route.name);
         //retornando icono, con el nombre asociado a la categoría
