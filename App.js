@@ -2,16 +2,20 @@ import * as React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
 import {Icon} from 'react-native-elements';
 //importing screens
 import HomeScreen from './screens/HomeScreen';
 import WishListScreen from './screens/WishListScreen';
+import ProductDetailScreen from './screens/ProductDetailScreen';
+import MapScreen from './screens/MapScreen';
 //importing custom components
 import DrawerMenu from './components/DrawerMenu';
 import SearchInput from './components/SearchInput';
 //importing data
 import {CATEGORIES, SUBCATEGORIES} from './data/dummy-data';
+
 
 const SubCatTab = createMaterialTopTabNavigator();
 
@@ -107,6 +111,17 @@ function CatTabs() {
   );
 }
 
+const ProductBottomTab = createBottomTabNavigator();
+
+function ProductBottomTabs ({route})  {
+  return(
+    <ProductBottomTab.Navigator>
+      <ProductBottomTab.Screen name="ProductDetail" component={ProductDetailScreen} />
+      <ProductBottomTab.Screen name="ProductMap" component={MapScreen} />
+    </ProductBottomTab.Navigator>
+  )
+}
+
 //Creando Home Navigator de tipo Stack
 const HomeStack = createStackNavigator();
 
@@ -139,6 +154,9 @@ function HomeNavigator({navigation}) {
           headerRight: () => <SearchInput />,
         }}
       />
+      <HomeStack.Screen
+        name="ProductBottomTabs"
+        component={ProductBottomTabs} />
     </HomeStack.Navigator>
   );
 }
@@ -155,7 +173,7 @@ function WishListNavigator({navigation}) {
   return (
     <WishListStack.Navigator>
       <WishListStack.Screen
-        name="Lista de Deseos"
+        name="WishList"
         component={WishListScreen}
         options={{
           //definiendo el titulo de la app
