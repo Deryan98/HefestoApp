@@ -116,7 +116,7 @@ const ProductBottomTab = createBottomTabNavigator();
 function ProductBottomTabs ({route})  {
   return(
     <ProductBottomTab.Navigator>
-      <ProductBottomTab.Screen name="ProductDetail" component={ProductDetailScreen} />
+      <ProductBottomTab.Screen name="ProductDetail" component={ProductDetailScreen} initialParams={{...route.params}}/>
       <ProductBottomTab.Screen name="ProductMap" component={MapScreen} />
     </ProductBottomTab.Navigator>
   )

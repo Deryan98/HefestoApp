@@ -11,17 +11,17 @@ const ProductList = props => {
         title={itemData.item.name}
         price={itemData.item.price}
         image={itemData.item.imageUrl}
+        onSelectProduct={() => {
+          props.navigation.navigate(
+            'ProductBottomTabs',
+            {
+              productName: itemData.item.name,
+              productTitle: itemData.item.title,
+            }
+          );
+        }}
         /**
          * 
-         onSelectProduct={() => {
-           props.navigation.navigate({
-             routeName: 'ProductBottomTabs',
-             params: {
-               productId: itemData.item.id,
-               productTitle: itemData.item.title,
-             }
-           });
-         }}
          */
       />
     );
