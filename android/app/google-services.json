@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "829395636313",
+    "firebase_url": "https://hefesto-6555d.firebaseio.com",
+    "project_id": "hefesto-6555d",
+    "storage_bucket": "hefesto-6555d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:829395636313:android:2cea56949455c04f422148",
+        "android_client_info": {
+          "package_name": "com.hefestoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "829395636313-knr8qsnqc0g7hadduo199r8ma5prhk7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr3NxH_tXx3N_FRNCQHIW0c0M14ZZqGZI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "829395636313-knr8qsnqc0g7hadduo199r8ma5prhk7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

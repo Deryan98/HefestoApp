@@ -12,7 +12,7 @@ import ProductDetailScreen from './screens/ProductDetailScreen';
 import MapScreen from './screens/MapScreen';
 //importing custom components
 import DrawerMenu from './components/DrawerMenu';
-import SearchInput from './components/SearchInput';
+import SearchIcon from './components/SearchIcon';
 //importing data
 import {CATEGORIES, SUBCATEGORIES} from './data/dummy-data';
 
@@ -151,7 +151,7 @@ function HomeNavigator({navigation}) {
               }}
             />
           ),
-          headerRight: () => <SearchInput />,
+          headerRight: () => <SearchIcon />
         }}
       />
       <HomeStack.Screen
@@ -199,7 +199,7 @@ function WishListNavigator({navigation}) {
               }}
             />
           ),
-          headerRight: () => <SearchInput />,
+          headerRight: () => <SearchIcon />
         }}
       />
     </WishListStack.Navigator>
