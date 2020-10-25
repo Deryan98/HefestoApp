@@ -1,4 +1,5 @@
 import * as React from 'react';
+import firestore from '@react-native-firebase/firestore';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
@@ -15,13 +16,84 @@ import DrawerMenu from './components/DrawerMenu';
 import SearchIcon from './components/SearchIcon';
 //importing data
 import {CATEGORIES, SUBCATEGORIES} from './data/dummy-data';
+import Category from './models/Category'
+import SubCategory from './models/SubCategory'
+//import {Categories, SubCategories} from './firebase/Api';
+
 
 
 const SubCatTab = createMaterialTopTabNavigator();
 
+const SubCategories = firestore().collection('SubCategories');
+
 function SubCatTabs({route}) {
-  //obteniendo el id de la categoría
-  const categoryId = CATEGORIES.find((category)=> route.name === category.title).id;
+
+  const [subcategories, setSubCategories] = React.useState([]);
+  
+  const [initialize, setInitialize] = React.useState(true);
+  const SUBCATGORIES = [];
+
+ 
+  console.log(route.params?.categoryId);
+  
+  React.useEffect(() => {
+    // if(initialize){
+      
+      console.log('Estoy en el use Effect')
+      SubCategories
+            .where('Category', '==', '/SubCategories/c1')
+            .get()
+            .then(querySnapshot => {
+              querySnapshot.forEach(documentSnapshot => {
+                console.log('Estoy iterando el querySnapshot')
+                SUBCATGORIES.push(new SubCategory(documentSnapshot.id, 
+                  documentSnapshot.data().title, documentSnapshot.data().iconName, 
+                  documentSnapshot.data().iconType), route.name);
+              });
+              setSubCategories(SUBCATGORIES)
+            })
+            .catch((error)=>{
+              console.log("Api call error");
+              alert(error.message);
+           });
+          //  setInitialize(false);
+    // }  
+  },[]);
+
+  let Screens = [];
+  console.log(subcategories);
+
+   if(subcategories.length != 0){
+     console.log('Entre al if')
+      //console.log(categories),
+      subcategories.map((category) => (
+        console.log('Muestro desde el server'),
+        //console.log(category),
+        Screens.push(<CatTab.Screen
+          //definiendo id de la lista
+          key={subcategories.id}
+          name={subcategories.title}
+          component={HomeScreen}
+        />)
+      ))
+    } 
+    else {
+      console.log('Entre al else')
+      //obteniendo el id de la categoría
+      const categoryId = CATEGORIES.find((category)=> route.name === category.title).id;
+      
+      SUBCATEGORIES.filter((subcat) => subcat.idCategory === categoryId).map(
+        (filteredSubCat) => (
+          Screens.push(<SubCatTab.Screen
+            key={filteredSubCat.id}
+            name={filteredSubCat.title}
+            component={HomeScreen}
+          />)
+        )
+      )
+    }
+
+    //const categoryId = CATEGORIES.find((category)=> route.name === category.title).id;
   //console.log(categoryId);
   return (
     <SubCatTab.Navigator
@@ -47,26 +119,72 @@ function SubCatTabs({route}) {
       },
     })}
     >
-      {/** Iterando las subcategorias a partir de su Id de categoria */}
-      {SUBCATEGORIES.filter((subcat) => subcat.idCategory === categoryId).map(
-        (filteredSubCat) => (
-          <SubCatTab.Screen
-            key={filteredSubCat.id}
-            name={filteredSubCat.title}
-            component={HomeScreen}
-          />
-        ),
-      )}
-      {/**
-      <SubCatTab.Screen name="Basica" component={HomeScreen} />
-       */}
+      {
+        Screens
+      }
+      
     </SubCatTab.Navigator>
   );
 }
 
 const CatTab = createMaterialTopTabNavigator();
 
-function CatTabs() {
+const Categories = firestore().collection('Categories');
+
+const  CatTabs = () => {
+
+  const [categories, setCategories] = React.useState([]);
+  
+  const [initialize, setInitialize] = React.useState(true);
+  const CATGORIES = [];
+
+  React.useEffect(() => {
+    // if(initialize){
+       Categories
+            .get()
+            .then(querySnapshot => {
+              querySnapshot.forEach(documentSnapshot => {
+                CATGORIES.push(new Category(documentSnapshot.id, documentSnapshot.data().title, documentSnapshot.data().iconName));
+              });
+              setCategories(CATGORIES)
+            })
+            .catch((error)=>{
+              console.log("Api call error");
+              alert(error.message);
+           });
+          //  setInitialize(false);
+    // }  
+  },[]);
+
+  let Screens = [];
+    
+   if(categories.length != 0){
+      //console.log(categories),
+      categories.map((category) => (
+        //console.log('Muestro desde el server'),
+        //console.log(category),
+        Screens.push(<CatTab.Screen
+          //definiendo id de la lista
+          key={category.id}
+          name={category.title}
+          component={SubCatTabs}
+          initialParams={{categoryId: category.id}}
+        />)
+      ))
+    } 
+    else {
+      CATEGORIES.map((category) => (
+        //console.log('Muestro desde Local'),
+             
+        Screens.push(<CatTab.Screen
+          //definiendo id de la lista
+          key={category.id}
+          name={category.title}
+          component={SubCatTabs}
+        />)
+      )) 
+    }
+
   return (
     <CatTab.Navigator
       tabBarOptions={{
@@ -78,17 +196,22 @@ function CatTabs() {
         activeTintColor: 'chartreuse',
         inactiveTintColor: 'green',
       }}
-      screenOptions={({route}) => ({
-        
+      screenOptions={({route}) => ({      
         //configurando el icono para cada categoría.
         tabBarIcon: ({color, size}) => {
           //variables a usar
           let iconName, catTitle, category;
           //obteniendo el nombre de la vista
           catTitle = route.name;
+          //console.log('log1: ')
+          //console.log(catTitle)
           //Encontrando categoría por su nombre
+          
           category = CATEGORIES.find((cat) => cat.title === catTitle);
+
+          //console.log(category);
           //asignando el nombre del icono
+          //console.log(category.iconName);
           iconName = category.iconName;
           //retornando icono, con el nombre asociado a la categoría
           return (
@@ -96,17 +219,9 @@ function CatTabs() {
           );
         },
       })}>
-      {/** Colocando las pantallas para cada categoría */}
-      {CATEGORIES.map((category) => (
         
-        <CatTab.Screen
-          //definiendo id de la lista
-          key={category.id}
-          name={category.title}
-          component={SubCatTabs}
-          
-        />
-      ))}
+      {Screens}
+      
     </CatTab.Navigator>
   );
 }
@@ -210,6 +325,7 @@ function WishListNavigator({navigation}) {
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+  
   return (
     <> 
     {/** Definiendo contenedor padre de navegadores */}
