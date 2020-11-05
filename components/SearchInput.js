@@ -7,7 +7,7 @@ const SearchInput = () => {
     <View style={styles.textFields}>
       <Input
         placeholder="Buscar"
-        rightIcon={
+        leftIcon={
           <Icon name="search" type="material" size={30} color="white" />
         }
         inputStyle={styles.inputStyle}
@@ -21,15 +21,9 @@ const styles = StyleSheet.create({
   textFields: {
     flexDirection: 'row',
     width: '100%',
-    marginTop: 15,
   },
   inputStyle: {
     color: '#FAFAFA',
-    maxWidth: 175,
-    marginBottom: -10,
-  },
-  inputContainerStyle: {
-    width: '100%',
   },
 });
 
