@@ -1,13 +1,25 @@
 import * as React from 'react';
-import {View, Text} from 'react-native';
-import {Search} from 'react-native-elements';
+import {View, Text, StyleSheet} from 'react-native';
+import {PRODUCTS} from '../data/dummy-data';
+import ProductList from '../components/ProductList';
+import Fuse from 'fuse.js';
 
-const SearchScreen = () => {
+const ResultsScreen = ({route}) => {
+  const [result, setResults] = React.useState([]);
+  console.log(route.params?.SearchText);
   return (
-    <View>
-      <Text>Soy la pantalla Resultados</Text>
+    <View style={styles.ResutlsScreenContainer}>
+      <ProductList listData={PRODUCTS} navigation={navigation} />
     </View>
   );
 };
 
-export default SearchScreen;
+const styles = StyleSheet.create({
+  ResutlsScreenContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default ResultsScreen;
