@@ -1,19 +1,18 @@
 import React from 'react';
 import {View, FlatList, StyleSheet} from 'react-native';
-
+import {Detail} from '../data/dummy-data.js';
 import ProductCard from './ProductCard';
 
 const ProductList = (props) => {
   const renderProductCard = (itemData) => {
     return (
       <ProductCard
-        title={itemData.item.name}
+        title={itemData.item.marca + itemData.item.modelo}
         price={itemData.item.price}
-        image={itemData.item.imageUrl}
+        image={itemData.item.image}
         onSelectProduct={() => {
           props.navigation.navigate('ProductBottomTabs', {
-            productName: itemData.item.name,
-            productTitle: itemData.item.title,
+            product: itemData.item,
           });
         }}
         /**
