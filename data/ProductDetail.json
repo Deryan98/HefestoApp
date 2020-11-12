@@ -1,0 +1,43 @@
+{
+    "Inventario": "Catalogo_Laptops",
+    "Lugar": "San Salvador",
+    "Periodo": 2020,
+    "existencias": true,
+    "Items": [
+        {
+            "marca": "Lenovo",
+            "modelo": "IdeaPad 3",
+            "Sistema Operativo": "Windows 10",
+            "Memoria": "256GB SSD", 
+            "Caracteristicas": [
+                "8GB RAM",
+                "Intel Pentium 7",
+                "17 pulgadas"
+            ] 
+
+        },
+        {
+            "marca": "HP",
+            "modelo": "Chromebook 11",
+            "Sistema Operativo": "Windows 10",
+            "Memoria": "16GB SSD", 
+            "Caracteristicas": [
+                "4GB RAM",
+                "Intel Celeron",
+                "11,6 pulgadas"
+            ] 
+        },
+
+        {
+            "marca": "ACER",
+            "modelo": "Aspire 5",
+            "Sistema Operativo": "Windows 10",
+            "Memoria": "128GB PCIe NVMe SSD", 
+            "Caracteristicas": [
+                "4GB RAM",
+                "AMD Ryzen 3 3200U Dual Core",
+                "15,6 pulgadas"
+            ] 
+        }
+    ] 
+}

@@ -15,6 +15,7 @@ import DrawerMenu from './components/DrawerMenu';
 import SearchInput from './components/SearchInput';
 //importing data
 import {CATEGORIES, SUBCATEGORIES} from './data/dummy-data';
+import { Details } from './data/dummy-data.js';
 
 
 const SubCatTab = createMaterialTopTabNavigator();
