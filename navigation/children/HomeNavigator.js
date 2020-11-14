@@ -63,6 +63,7 @@ export const HomeNavigator = ({navigation}) => {
       <HomeStack.Screen
         name="ProductBottomTabs"
         component={ProductBottomTabs}
+        options={{headerShown: false}}
       />
       {/* <HomeStack.Screen name="SearchNavigator" component={SearchNavigator} />
       <HomeStack.Screen name="ResultsNavigator" component={ResultsNavigator} /> */}

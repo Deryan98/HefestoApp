@@ -745,10 +745,6 @@ export const PRODUCTS = [
 
 export const Details = [
   {
-    // Inventario: 'Catalogo_Laptops',
-    // Lugar: 'San Salvador',
-    // Periodo: 2020,
-    // existencias: true,
     id: 'p1',
     marca: 'Lenovo',
     modelo: 'IdeaPad 3',
@@ -760,33 +756,209 @@ export const Details = [
     image:
       'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
   },
+
   {
     id: 'p2',
-    marca: 'HP',
-    modelo: 'Chromebook 11',
+    marca: 'Mini PC Asrock',
+    modelo: '90BXG3G01',
     sistema_operativo: 'Windows 10',
-    memoria: '16GB SSD',
-    price: '$260',
-    caracteristicas: [' 4GB RAM -', ' Intel Celeron -', ' 11,6 pulgadas '],
-    subCategory: 'sc2',
+    memoria: '2 x 2.5" SATA 6Gb disco duro',
+    price: '$166.00',
+    caracteristicas: [
+      ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
+      ' A300W RYZEN -',
+      ' -',
+    ],
+    subCategory: 'sc1',
     image:
-      'https://d22k5h68hofcrd.cloudfront.net/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/4/P/4PF41LA-1_T1558726893.png',
+      'https://aeon.com.sv/web/image/product.product/6379/image_1024/%5B6764%5D%20Mini%20PC%20Asrock%2090BXG3G01%20A300W%20RYZEN?unique=eaa02f9',
   },
 
   {
     id: 'p3',
-    marca: 'ACER',
-    modelo: 'Aspire 5',
+    marca: 'Mini PC Asrock',
+    modelo: '90BXG3701',
     sistema_operativo: 'Windows 10',
-    memoria: '128GB PCIe NVMe SSD',
-    price: '$500',
+    memoria: 'Espacio para dos discos duros/HDD de 2,5',
+    price: '$170.00',
     caracteristicas: [
-      ' 4GB RAM -',
-      ' AMD Ryzen3 3200U DualCore -',
-      ' 15,6 pulgadas ',
+      ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
+      ' AA20BAOW intel -',
+      ' -',
+    ],
+    subCategory: 'sc1',
+    image:
+      'https://aeon.com.sv/web/image/product.product/6309/image_1024/%5B6763%5D%20Mini%20PC%20Asrock%20%2090BXG3701-A20BAOW%20intel?unique=5cc788f',
+  },
+
+  {
+    id: 'p4',
+    marca: 'Mini PC ZOTAC',
+    modelo: 'CI620 NANO',
+    sistema_operativo: 'Windows 10',
+    memoria: 'SSD 120 GB',
+    price: '$399.00',
+    caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+    subCategory: 'sc2',
+    image:
+      'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+  },
+
+  {
+    id: 'p5',
+    marca: 'Mini PC Asrock',
+    modelo: 'G4930',
+    sistema_operativo: 'Windows 10',
+    memoria: 'SSD 240GB',
+    price: '$332.00',
+    caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
+    subCategory: 'sc2',
+    image:
+      'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+  },
+
+  {
+    id: 'p6',
+    marca: 'HP',
+    modelo: 'PROBOOK 440 G7',
+    sistema_operativo: 'Windows 10 Pro 64-bit',
+    memoria: 'SATA de 2.5″ de 1 TB',
+    price: '$332.00',
+    caracteristicas: [
+      ' 4 GB DDR4 SDRAM -',
+      ' Intel® Core™ i7-10510U (4.90 GHz) -',
+      'LCD delgada de 15.6″ (1366 x 768)',
     ],
     subCategory: 'sc3',
-    image:
-      'https://tiendarg.com.ar/pub/media/catalog/product/cache/9acdd941c403ec1171fed4e45ec43f96/a/c/acer-aspire-3-a315-54-54k-42-42g-wp-win10-black-02.jpg',
+    image: 'https://kpchardware.com/img/p/1/0/0/7/8/10078-home_default.jpg',
   },
+
+  {
+    id: 'p7',
+    marca: 'HP',
+    modelo: 'OMEN 15-dc1002la',
+    sistema_operativo: 'Windows 10',
+    memoria: '512GB SSD',
+    price: '$1540',
+    caracteristicas: [' 8GB RAM -', ' Intel Core i5 -', ' 15,6" -'],
+    subCategory: 'sc3',
+    image:
+      'https://www.kayfastore.com/assets/images/galleries/1591026754142230.jpg',
+  },
+
+  {
+    id: 'p8',
+    marca: 'CPU Panzer',
+    modelo: 'PRO 3700X',
+    sistema_operativo: 'Windows 10',
+    memoria: 'SSD 240GB',
+    price: '$1,550.00',
+    caracteristicas: [
+      ' 16GB Ram -',
+      ' AMD Ryzen™ 7 3700X 3.6Ghz up to 4.2Ghz AM4 -',
+      '',
+    ],
+    subCategory: 'sc4',
+    image:
+      'https://aeon.com.sv/web/image/product.product/6726/image_1024/CPU%20Panzer%20PRO%203700X%2C%2016GB%20Ram%2C%20SSD%20240GB%2C%201TB%20HDD%2C%20RX%205700%2C%2080+Bronze%20%2816GB%2C%20SSD240%2C%20Cooler%20de%20Stock%29?unique=3d76064',
+  },
+
+  {
+    id: 'p9',
+    marca: 'DELL',
+    modelo: 'LATITUDE 5490',
+    sistema_operativo: 'Windows 10 PRO',
+    memoria: 'SSD 256GB',
+    price: '$1,599.00',
+    caracteristicas: [
+      ' RAM 8GB -',
+      ' INTEL CORE I7 8650U -',
+      ' PANTALLA LED HD 14',
+    ],
+    subCategory: 'sc4',
+    image:
+      'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+  },
+
+  {
+    id: 'p10',
+    marca: 'MeshTown',
+    modelo: 'CPU Gaming',
+    sistema_operativo: 'Windows 10 PRO',
+    memoria: 'SSD 240GB',
+    price: '$1,599.00',
+    caracteristicas: [' 16GB RAM -', ' Ryzen 3 3100 -', ''],
+    subCategory: 'sc5',
+    image:
+      'https://aeon.com.sv/web/image/product.product/6803/image_1024/CPU%20Gaming%20MeshTown%2C%20Ryzen%203%203100%2C%2016GB%20RAM%2C%20SSD%20240GB%2C%20RX580%208GB%2C%20600W%2080+%20RGB%20%28Ryzen%203100%29?unique=2c012b4',
+  },
+
+  {
+    id: 'p11',
+    marca: 'Acer',
+    modelo: 'Nitro 5',
+    sistema_operativo: 'Windows 10 Home',
+    memoria: 'SSD 256GB',
+    price: '$599.99',
+    caracteristicas: [' 8GB RAM -', ' Intel Core i5-9300H -', '15.6 Pulgadas'],
+    subCategory: 'sc5',
+    image:
+      'https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg',
+  },
+
+  {
+    id: 'p12',
+    marca: 'Computadora Completa',
+    modelo: 'GT710',
+    sistema_operativo: 'Windows 10 Home',
+    memoria: 'SSD 240GB',
+    price: '$650.00',
+    caracteristicas: [' 8GB RAM -', ' Intel Core i5 -', 'Monitor Samsung 22”'],
+    subCategory: 'sc6',
+    image:
+      'https://xht.com.sv/wp-content/uploads/2020/08/photo_2020-08-19_22-06-55.jpg',
+  },
+
+  {
+    id: 'p13',
+    marca: 'Computadora AMD Ryzen 3',
+    modelo: '3200G',
+    sistema_operativo: 'Windows 10 Home',
+    memoria: 'SSD 240GB',
+    price: '$650.00',
+    caracteristicas: [' 8GB RAM -', ' AMD Ryzen 3 3200G -', ''],
+    subCategory: 'sc6',
+    image:
+      'https://xht.com.sv/wp-content/uploads/2020/09/Computadora-AMD-Ryzen-3-3200G-8GB.jpg',
+  },
+
+  // {
+  //   id: 'pn',
+  //   marca: 'HP',
+  //   modelo: 'Chromebook 11',
+  //   sistema_operativo: 'Windows 10',
+  //   memoria: '16GB SSD',
+  //   price: '$260',
+  //   caracteristicas: [' 4GB RAM -', ' Intel Celeron -', ' 11,6 pulgadas '],
+  //   subCategory: 'sc2',
+  //   image:
+  //     'https://d22k5h68hofcrd.cloudfront.net/catalog/product/cache/b3b166914d87ce343d4dc5ec5117b502/4/P/4PF41LA-1_T1558726893.png',
+  // },
+
+  // {
+  //   id: 'pm',
+  //   marca: 'ACER',
+  //   modelo: 'Aspire 5',
+  //   sistema_operativo: 'Windows 10',
+  //   memoria: '128GB PCIe NVMe SSD',
+  //   price: '$500',
+  //   caracteristicas: [
+  //     ' 4GB RAM -',
+  //     ' AMD Ryzen3 3200U DualCore -',
+  //     ' 15,6 pulgadas ',
+  //   ],
+  //   subCategory: 'sc3',
+  //   image:
+  //     'https://tiendarg.com.ar/pub/media/catalog/product/cache/9acdd941c403ec1171fed4e45ec43f96/a/c/acer-aspire-3-a315-54-54k-42-42g-wp-win10-black-02.jpg',
+  // },
 ];

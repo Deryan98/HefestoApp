@@ -1,11 +1,11 @@
 import * as React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {HeaderBar} from '../components/HeaderBar';
-import {PRODUCTS} from '../data/dummy-data';
+import {PRODUCTS, Details} from '../data/dummy-data';
 import ProductList from '../components/ProductList';
 import Fuse from 'fuse.js';
 
-const SearchScreen = ({navigation}) => {
+const SearchScreen = ({navigation, route}) => {
   const [inputSearch, setInputSearch] = React.useState('');
 
   const handleKeyPress = (value) => {
@@ -13,8 +13,8 @@ const SearchScreen = ({navigation}) => {
     setInputSearch(value);
   };
 
-  const fuse = new Fuse(PRODUCTS, {
-    keys: ['name'],
+  const fuse = new Fuse(Details, {
+    keys: ['marca', 'modelo', 'price'],
     includeScore: true,
   });
   //console.log('fuse', fuse);
@@ -35,7 +35,11 @@ const SearchScreen = ({navigation}) => {
 
       <Text>{console.log(inputSearch)}</Text>
 
-      <ProductList listData={productResults} navigation={navigation} />
+      <ProductList
+        route={route}
+        listData={productResults}
+        navigation={navigation}
+      />
     </>
   );
 };

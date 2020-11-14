@@ -13,6 +13,7 @@ const ProductList = (props) => {
         onSelectProduct={() => {
           props.navigation.navigate('ProductBottomTabs', {
             product: itemData.item,
+            routename: props.route,
           });
         }}
         /**
