@@ -1,7 +1,8 @@
 import * as React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {CatTabs} from './children/CatTabs';
-import {ProductBottomTabs} from './children/ProductBottomTabs';
+import { useDispatch } from 'react-redux';
+import { createStackNavigator } from '@react-navigation/stack';
+import { CatTabs } from './children/CatTabs';
+import { ProductBottomTabs } from './children/ProductBottomTabs';
 import SearchScreen from '../../screens/SearchScreen';
 import ResultsScreen from '../../screens/ResultsScreen';
 //importing custom components

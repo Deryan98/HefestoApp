@@ -1,6 +1,8 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import ProductList from '../components/ProductList';
+import { useSelector } from 'react-redux';
 
+/*
 function WishListScreen() {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
@@ -8,5 +10,16 @@ function WishListScreen() {
     </View>
   );
 }
+*/
+
+const WishListScreen = props => {
+  const wishProd = useSelector(state => state.products.wishProducts);
+  
+  return <ProductList listData = {wishProd} navigation={props.navigation}/>;
+}
+
+WishListScreen.navigationOptions = {
+  headerTitle: "Tu Wishlist"
+};
 
 export default WishListScreen;
