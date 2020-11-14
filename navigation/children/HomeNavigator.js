@@ -1,21 +1,31 @@
 import * as React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
-import {CatTabs} from './children/CatTabs';
-import {ProductBottomTabs} from './children/ProductBottomTabs';
+import { useDispatch } from 'react-redux';
+import { createStackNavigator } from '@react-navigation/stack';
+import { CatTabs } from './children/CatTabs';
+import { ProductBottomTabs } from './children/ProductBottomTabs';
 import SearchScreen from '../../screens/SearchScreen';
 import ResultsScreen from '../../screens/ResultsScreen';
 //importing custom components
 import DrawerMenu from '../../components/DrawerMenu';
-import {Icon, Input, SearchBar} from 'react-native-elements';
-import {event} from 'react-native-reanimated';
+import { Icon, Input, SearchBar } from 'react-native-elements';
+import { event } from 'react-native-reanimated';
+//import { toggleWishlist } from '../store/actions/products';
 
-export const HomeNavigator = ({navigation}) => {
+export const HomeNavigator = ({ navigation }) => {
   const HomeStack = createStackNavigator();
 
   const [inputSearch, setInputSearch] = React.useState('');
 
   const drawerMenuHandler = (navigation) => {
     navigation.openDrawer();
+  };
+  const favoritesHandler = (navigation) => {
+    //Aqui se hace
+    /*const dispatch = useDispatch();
+
+    const toggleWishlistHandler = () => {
+      dispatch(toggleWishlist());
+    }*/
   };
   const searchHandler = (navigation) => {
     navigation.navigate('SearchScreen');
@@ -55,7 +65,7 @@ export const HomeNavigator = ({navigation}) => {
               size={30}
               color="white"
               onPress={() => searchHandler(navigation)}
-              iconStyle={{marginRight: 10}}
+              iconStyle={{ marginRight: 10 }}
             />
           ),
         }}
@@ -63,79 +73,100 @@ export const HomeNavigator = ({navigation}) => {
       <HomeStack.Screen
         name="ProductBottomTabs"
         component={ProductBottomTabs}
+        options={{
+          title: 'Detalles',
+          headerStyle: {
+            backgroundColor: 'black',
+          },
+          headerTintColor: 'white',
+          headerTitleStyle: {
+            fontWeight: 'normal',
+            marginLeft: -20,
+          },
+          headerRight: () => (
+            <Icon
+              name="star-outline"
+              type="material-community"
+              size={30}
+              color="white"
+              onPress={() => favoritesHandler(navigation)}
+              iconStyle={{ marginRight: 10 }}
+            />
+          ),
+        }}
       />
       {/* <HomeStack.Screen name="SearchNavigator" component={SearchNavigator} />
       <HomeStack.Screen name="ResultsNavigator" component={ResultsNavigator} /> */}
       <HomeStack.Screen
         name="SearchScreen"
         component={SearchScreen}
-        options={{headerShown: false}}
-        //initialParams={{SearchText: inputSearch}}
-        // options={{
-        //   headerTintColor: 'chartreuse',
-        //   title: (
-        // <Input
-        //   placeholder="Buscar"
-        //   placeholderTextColor="yellowgreen"
-        //   selectionColor="yellowgreen"
-        //   autoFocus={true}
-        //   defaultValue={inputSearch}
-        //   onChangeText={(text) => setInputSearch(text)}
-        //   onKeyPress={(text) => setInputSearch(text)}
-        //   rightIcon={
-        //     <Icon
-        //       name="search"
-        //       type="material"
-        //       size={35}
-        //       color="green"
-        //       iconStyle={{
-        //         borderRadius: 30,
-        //         backgroundColor: 'chartreuse',
-        //       }}
-        //       onPress={() => searchingHandler(navigation)}
-        //     />
-        //   }
-        //   inputStyle={{
-        //     color: 'chartreuse',
-        //     width: '100%',
-        //   }}
-        //   inputContainerStyle={{
-        //     //backgroundColor: 'blue',
-        //     width: 250,
-        //     justifyContent: 'center',
-        //     justifyContent: 'space-between',
-        //   }}
-        // />
-        //   ),
-        //   headerStyle: {
-        //     //color de la app bar
-        //     backgroundColor: 'black',
-        //   },
-        //   //Color del titulo del header
-        //   //headerTintColor: 'chartreuse',
-        //   headerTitleStyle: {
-        //     //Aplicando estilos al titulo del header
-        //     fontWeight: 'normal',
-        //     //color: 'chartreuse',
-        //     height: '80%',
-        //     width: '100%',
-        //     backgroundColor: 'green',
-        //     borderRadius: 30,
-        //     margin: 5,
-        //     marginLeft: -15,
-        //   },
-        //   headerTitleContainerStyle: {
-        //     //backgroundColor: 'green',
+        options={{ headerShown: false }}
+      //initialParams={{SearchText: inputSearch}}
+      // options={{
+      //   headerTintColor: 'chartreuse',
+      //   title: (
+      // <Input
+      //   placeholder="Buscar"
+      //   placeholderTextColor="yellowgreen"
+      //   selectionColor="yellowgreen"
+      //   autoFocus={true}
+      //   defaultValue={inputSearch}
+      //   onChangeText={(text) => setInputSearch(text)}
+      //   onKeyPress={(text) => setInputSearch(text)}
+      //   rightIcon={
+      //     <Icon
+      //       name="search"
+      //       type="material"
+      //       size={35}
+      //       color="green"
+      //       iconStyle={{
+      //         borderRadius: 30,
+      //         backgroundColor: 'chartreuse',
+      //       }}
+      //       onPress={() => searchingHandler(navigation)}
+      //     />
+      //   }
+      //   inputStyle={{
+      //     color: 'chartreuse',
+      //     width: '100%',
+      //   }}
+      //   inputContainerStyle={{
+      //     //backgroundColor: 'blue',
+      //     width: 250,
+      //     justifyContent: 'center',
+      //     justifyContent: 'space-between',
+      //   }}
+      // />
+      //   ),
+      //   headerStyle: {
+      //     //color de la app bar
+      //     backgroundColor: 'black',
+      //   },
+      //   //Color del titulo del header
+      //   //headerTintColor: 'chartreuse',
+      //   headerTitleStyle: {
+      //     //Aplicando estilos al titulo del header
+      //     fontWeight: 'normal',
+      //     //color: 'chartreuse',
+      //     height: '80%',
+      //     width: '100%',
+      //     backgroundColor: 'green',
+      //     borderRadius: 30,
+      //     margin: 5,
+      //     marginLeft: -15,
+      //   },
+      //   headerTitleContainerStyle: {
+      //     //backgroundColor: 'green',
 
-        //     height: '100%',
-        //     width: '75%',
-        //   },
-        // }}
+      //     height: '100%',
+      //     width: '75%',
+      //   },
+      // }}
       />
       <HomeStack.Screen
         name="ResultsScreen"
         component={ResultsScreen}
-        initialParams={{SearchText: inputSearch}}
+        initialParams={{ SearchText: inputSearch }}
         options={{
           headerTintColor: 'chartreuse',
           title: (
