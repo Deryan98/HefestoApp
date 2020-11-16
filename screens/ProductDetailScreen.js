@@ -1,25 +1,40 @@
-import {useLinkProps} from '@react-navigation/native';
-import React, {useEffect} from 'react';
-import {View, Text, StyleSheet, Image, ScrollView} from 'react-native';
+import { useLinkProps } from '@react-navigation/native';
+import React, { useEffect, useCallback } from 'react';
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 //import {HeaderBar} from '../components/HeaderBar';
-import {HeaderDetail} from '../components/HeaderDetail';
-import {Details} from '../data/dummy-data';
+import { HeaderDetail } from '../components/HeaderDetail';
+import { Details } from '../data/dummy-data';
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleWishlist } from '../store/actions/products'
 
-function ProductDetailScreen({route, navigation}) {
-  const handleStar = () => {
+function ProductDetailScreen({ route, navigation }) {
+  //no me reconoce el props
+  const prodId = route.params?.product.id;
+
+  const dispatch = useDispatch()
+
+  const toggleWishHandler = useCallback(() => {
+    dispatch(toggleWishlist(prodId));
+  }, [dispatch, prodId]);
+
+  /*useEffect(() => {
+    navigation.setParams({ toggleWishlist: toggleWishHandler });
+  }, [toggleWishHandler]);*/
+
+  /*const handleStar = () => {
     console.log('Presionaste Favoritos');
-  };
+  };*/
   return (
     <>
       <HeaderDetail
         navigation={navigation}
         route={route}
-        handleStar={handleStar}
+        handleStar={toggleWishHandler}
       />
       <View style={styles.container}>
-        <ScrollView>
+        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
           <Image
-            source={{uri: route.params?.product.image}}
+            source={{ uri: route.params?.product.image }}
             style={styles.photo}
           />
 

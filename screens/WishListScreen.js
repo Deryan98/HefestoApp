@@ -12,14 +12,14 @@ function WishListScreen() {
 }
 */
 
-const WishListScreen = props => {
+const WishListScreen = ({navigation, route}) => {
   const wishProd = useSelector(state => state.products.wishProducts);
-  
-  return <ProductList listData = {wishProd} navigation={props.navigation}/>;
+
+  return <ProductList route={route} listData={wishProd} navigation={navigation} />;
 }
 
-WishListScreen.navigationOptions = {
+/*WishListScreen.navigationOptions = {
   headerTitle: "Tu Wishlist"
-};
+};*/
 
 export default WishListScreen;

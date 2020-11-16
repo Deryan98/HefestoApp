@@ -28,11 +28,12 @@ export const HeaderDetail = (props) => {
           style={{
             width: '100%',
             color: 'chartreuse',
-            fontSize: 25,
+            fontSize: 20,
+            fontWeight: 'bold',
             flexDirection: 'row',
             justifyContent: 'flex-start',
           }}>
-          Especificaciones.
+          Detalles
         </Text>
       }
       rightComponent={
