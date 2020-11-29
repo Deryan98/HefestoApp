@@ -1,6 +1,6 @@
 import React from 'react';
 import ProductList from '../components/ProductList';
-import { useSelector } from 'react-redux';
+import {useSelector} from 'react-redux';
 
 /*
 function WishListScreen() {
@@ -13,10 +13,12 @@ function WishListScreen() {
 */
 
 const WishListScreen = ({navigation, route}) => {
-  const wishProd = useSelector(state => state.products.wishProducts);
+  const wishProd = useSelector((state) => state.products.wishProducts);
 
-  return <ProductList route={route} listData={wishProd} navigation={navigation} />;
-}
+  return (
+    <ProductList route={'Home'} listData={wishProd} navigation={navigation} />
+  );
+};
 
 /*WishListScreen.navigationOptions = {
   headerTitle: "Tu Wishlist"
