@@ -5,22 +5,28 @@ import ProductCard from './ProductCard';
 
 const ProductList = (props) => {
   const renderProductCard = (itemData) => {
-    return (
-      <ProductCard
-        title={itemData.item.marca + itemData.item.modelo}
-        price={itemData.item.price}
-        image={itemData.item.image}
-        onSelectProduct={() => {
-          props.navigation.navigate('ProductBottomTabs', {
-            product: itemData.item,
-            routename: props.route,
-          });
-        }}
-        /**
-         *
-         */
-      />
-    );
+    if (itemData.item.image != '') {
+      return (
+        <ProductCard
+          title={itemData.item.marca + itemData.item.modelo}
+          price={itemData.item.price}
+          image={itemData.item.image}
+          onSelectProduct={() => {
+            if (props.route.name == 'ProductsStoreScreen') {
+              props.navigation.navigate('ProductDetail', {
+                product: itemData.item,
+                routename: props.route,
+              });
+            } else {
+              props.navigation.navigate('ProductBottomTabs', {
+                product: itemData.item,
+                routename: props.route,
+              });
+            }
+          }}
+        />
+      );
+    }
   };
 
   return (

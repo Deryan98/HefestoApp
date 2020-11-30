@@ -82,137 +82,215 @@ export const Franchisies = [
         telefono: '22103865',
         latitud: '13.702328',
         longitud: '-89.237885',
+        Subcategories: [
+          {
+            id: 'sc1',
+            name: 'Medium',
+            icon: 'laptop-chromebook',
+            iconType: 'material-community',
+            color: 'red',
+            Products: [
+              {
+                id: 'p1',
+                marca: 'Mini PC ZOTAC',
+                modelo: 'CI620 NANO',
+                sistema_operativo: 'Windows 10',
+                memoria: 'SSD 120 GB',
+                price: '$399.00',
+                caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+                subCategory: 'sc2',
+                image:
+                  'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+              },
+
+              {
+                id: 'p2',
+                marca: 'Mini PC Asrock',
+                modelo: 'G4930',
+                sistema_operativo: 'Windows 10',
+                memoria: 'SSD 240GB',
+                price: '$332.00',
+                caracteristicas: [
+                  ' 8GB DDR4 -',
+                  ' Intel Celeron G4930 -',
+                  ' -',
+                ],
+                subCategory: 'sc2',
+                image:
+                  'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+              },
+            ],
+          },
+          {
+            id: 'sc2',
+            name: 'Basic',
+            icon: 'laptop',
+            iconType: 'material-community',
+            color: 'yellow',
+            Products: [
+              {
+                id: 'p1',
+                marca: 'Mini PC ZOTAC',
+                modelo: 'CI620 NANO',
+                sistema_operativo: 'Windows 10',
+                memoria: 'SSD 120 GB',
+                price: '$399.00',
+                caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+                subCategory: 'sc2',
+                image:
+                  'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+              },
+
+              {
+                id: 'p2',
+                marca: 'Mini PC Asrock',
+                modelo: 'G4930',
+                sistema_operativo: 'Windows 10',
+                memoria: 'SSD 240GB',
+                price: '$332.00',
+                caracteristicas: [
+                  ' 8GB DDR4 -',
+                  ' Intel Celeron G4930 -',
+                  ' -',
+                ],
+                subCategory: 'sc2',
+                image:
+                  'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+              },
+            ],
+          },
+        ],
       },
     ],
   },
-  {
-    id: 'frch2',
-    name: 'KPC Hardware',
-    description:
-      'KPC Hardware, fue creada como una división de G Group S.A., con la visión de convertirse en empresa líder en ventas y soporte técnico en el mercado de tecnologías para usuario final de gama media y alta en El Salvador.   Tenemos como propósito, representar las mejores marcas de hardware del mercado mundial, que permitan a nuestros clientes de diseño, ingeniería y entusiastas “gamers”, satisfacer y exceder cualquier necesidad que sus equipos demanden, brindando para ello, la debida asesoría técnica que otorgue a nuestros compradores, una inversión efectiva y duradera, además de los precios más justos posibles y la mejor atención personalizada que podamos entregar.  Con énfasis en equipos silenciosos y bajas temperaturas de operación, alargamos la vida útil y maximizamos la inversión que nuestros clientes realizan, cuando adquieren nuestros productos.',
-    logo: 'https://kpchardware.com/img/kpc-hardwware-1508193268.jpg',
-    Stores: [
-      {
-        correo: 'info@kpchardware.com',
-        telefono: '22337600',
-        latitud: '13.702978',
-        longitud: '-89.245679',
-      },
-    ],
-  },
-  {
-    id: 'frch3',
-    name: 'XHT',
-    description:
-      'Xtreme Hardware Technology , Productos Garantizados Al Mejor Precio y Con La Mejor Calidad. Escribenos , Recuerda Si no lo tenemos ¡lo conseguimos!',
-    logo:
-      'https://xht.com.sv/wp-content/uploads/2020/04/xht-logo-black.png.webp',
-    Stores: [
-      {
-        correo: 'xht@gmail.com',
-        telefono: '25275703',
-        latitud: '13.675334',
-        longitud: '-89.263428',
-      },
-    ],
-  },
-  {
-    id: 'frch4',
-    name: 'Kaifa Store',
-    description:
-      'Somos una empresa 100% Salvadoreña  dedicada a brindarle lo más novedoso en Computadoras de Alto Rendimiento y sus componentes principales. Con productos de las mejores marcas internacionales en línea de Cases, Procesadores, Disipadores, Moherboards, Tarjetas de Video, Memoria Ram, Discos Duros, SSD, Enfriamiento líquido Laptops y Periféricos como Impresores, Proyectores Teclados, Mouse Básicos y Gaming entre otros.',
-    logo:
-      'https://www.kayfastore.com/assets/images/15985687241569288848kayfa.png',
-    Stores: [
-      {
-        correo: 'kayfa.info49@gmail.com',
-        telefono: '22604027',
-        latitud: '13.7008341',
-        longitud: '-89.2202497',
-      },
-    ],
-  },
-  {
-    id: 'frch5',
-    name: 'PC MUNDO',
-    description:
-      'Tienda De Informática en san salvador con una tradicion de servicio de mas de 10 años proporcionando la mejor calidad y precio.',
-    logo:
-      'https://scontent.fsal5-1.fna.fbcdn.net/v/t1.0-9/117715633_3505772532769124_1215410116153770818_n.jpg?_nc_cat=105&ccb=2&_nc_sid=09cbfe&_nc_ohc=LXmyBOy3oEEAX-x3eTp&_nc_ht=scontent.fsal5-1.fna&oh=448b4f21c81625da587801618f5fa9cf&oe=5FE6D635',
-    Stores: [
-      {
-        correo: '',
-        telefono: '71216139',
-        latitud: '13.7088919',
-        longitud: '-89.2039045',
-      },
-    ],
-  },
-  {
-    id: 'frch6',
-    name: 'Alfa Computadoras',
-    description: 'Tienda De Informática en san salvador.',
-    logo:
-      'https://www.alfacomputadoras.com/wp-content/uploads/2019/10/IMG_7742.jpg',
-    Stores: [
-      {
-        correo: 'ventas@alfacomputadoras.com',
-        telefono: '22755532',
-        latitud: '13.7159299',
-        longitud: '-89.2166834',
-      },
-    ],
-  },
-  {
-    id: 'frch7',
-    name: 'Zona Digital',
-    description:
-      'Nos caracterizamos por tener lo más nuevo en Computadoras, Laptops, Gaming, Accesorios, y mucho más.',
-    logo: 'https://store.zonadigitalsv.com/default/images/logo.gif',
-    Stores: [
-      {
-        correo: 'zonadigitalmerliot@gmail.com',
-        telefono: '22294957',
-        latitud: '13.6779157',
-        longitud: '-89.2769987',
-      },
-      {
-        correo: 'zonadigitalmerliot@gmail.com',
-        telefono: '22058436',
-        latitud: '13.6982079',
-        longitud: '-89.1505647',
-      },
-    ],
-  },
-  {
-    id: 'frch8',
-    name: 'SoLuNeXxT',
-    description:
-      'Somos una Empresa de Tecnología ... Desde venta y mantenimiento de computadoras y periféricos, Hosting y Diseño Web, hasta el desarrollo de Aplicaciones.',
-    logo: 'http://www.solunexxt.com/img/SoLuNeXxT_03.png',
-    Stores: [
-      {
-        correo: 'ventas@solunexxt.com',
-        telefono: '22846969',
-        latitud: '13.7168566',
-        longitud: '-89.211904',
-      },
-    ],
-  },
-  {
-    id: 'frch9',
-    name: 'Tienda Intelmax',
-    description: 'Equipos Electrónicos y más Desde 2006.',
-    logo: 'https://tiendaintelmax.net/ntlmx/img/logo.png',
-    Stores: [
-      {
-        correo: 'info@intelmax.net',
-        telefono: '25256518',
-        latitud: '13.6788127',
-        longitud: '-89.2752375',
-      },
-    ],
-  },
+  // {
+  //   id: 'frch2',
+  //   name: 'KPC Hardware',
+  //   description:
+  //     'KPC Hardware, fue creada como una división de G Group S.A., con la visión de convertirse en empresa líder en ventas y soporte técnico en el mercado de tecnologías para usuario final de gama media y alta en El Salvador.   Tenemos como propósito, representar las mejores marcas de hardware del mercado mundial, que permitan a nuestros clientes de diseño, ingeniería y entusiastas “gamers”, satisfacer y exceder cualquier necesidad que sus equipos demanden, brindando para ello, la debida asesoría técnica que otorgue a nuestros compradores, una inversión efectiva y duradera, además de los precios más justos posibles y la mejor atención personalizada que podamos entregar.  Con énfasis en equipos silenciosos y bajas temperaturas de operación, alargamos la vida útil y maximizamos la inversión que nuestros clientes realizan, cuando adquieren nuestros productos.',
+  //   logo: 'https://kpchardware.com/img/kpc-hardwware-1508193268.jpg',
+  //   Stores: [
+  //     {
+  //       correo: 'info@kpchardware.com',
+  //       telefono: '22337600',
+  //       latitud: '13.702978',
+  //       longitud: '-89.245679',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch3',
+  //   name: 'XHT',
+  //   description:
+  //     'Xtreme Hardware Technology , Productos Garantizados Al Mejor Precio y Con La Mejor Calidad. Escribenos , Recuerda Si no lo tenemos ¡lo conseguimos!',
+  //   logo:
+  //     'https://xht.com.sv/wp-content/uploads/2020/04/xht-logo-black.png.webp',
+  //   Stores: [
+  //     {
+  //       correo: 'xht@gmail.com',
+  //       telefono: '25275703',
+  //       latitud: '13.675334',
+  //       longitud: '-89.263428',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch4',
+  //   name: 'Kaifa Store',
+  //   description:
+  //     'Somos una empresa 100% Salvadoreña  dedicada a brindarle lo más novedoso en Computadoras de Alto Rendimiento y sus componentes principales. Con productos de las mejores marcas internacionales en línea de Cases, Procesadores, Disipadores, Moherboards, Tarjetas de Video, Memoria Ram, Discos Duros, SSD, Enfriamiento líquido Laptops y Periféricos como Impresores, Proyectores Teclados, Mouse Básicos y Gaming entre otros.',
+  //   logo:
+  //     'https://www.kayfastore.com/assets/images/15985687241569288848kayfa.png',
+  //   Stores: [
+  //     {
+  //       correo: 'kayfa.info49@gmail.com',
+  //       telefono: '22604027',
+  //       latitud: '13.7008341',
+  //       longitud: '-89.2202497',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch5',
+  //   name: 'PC MUNDO',
+  //   description:
+  //     'Tienda De Informática en san salvador con una tradicion de servicio de mas de 10 años proporcionando la mejor calidad y precio.',
+  //   logo:
+  //     'https://scontent.fsal5-1.fna.fbcdn.net/v/t1.0-9/117715633_3505772532769124_1215410116153770818_n.jpg?_nc_cat=105&ccb=2&_nc_sid=09cbfe&_nc_ohc=LXmyBOy3oEEAX-x3eTp&_nc_ht=scontent.fsal5-1.fna&oh=448b4f21c81625da587801618f5fa9cf&oe=5FE6D635',
+  //   Stores: [
+  //     {
+  //       correo: '',
+  //       telefono: '71216139',
+  //       latitud: '13.7088919',
+  //       longitud: '-89.2039045',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch6',
+  //   name: 'Alfa Computadoras',
+  //   description: 'Tienda De Informática en san salvador.',
+  //   logo:
+  //     'https://www.alfacomputadoras.com/wp-content/uploads/2019/10/IMG_7742.jpg',
+  //   Stores: [
+  //     {
+  //       correo: 'ventas@alfacomputadoras.com',
+  //       telefono: '22755532',
+  //       latitud: '13.7159299',
+  //       longitud: '-89.2166834',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch7',
+  //   name: 'Zona Digital',
+  //   description:
+  //     'Nos caracterizamos por tener lo más nuevo en Computadoras, Laptops, Gaming, Accesorios, y mucho más.',
+  //   logo: 'https://store.zonadigitalsv.com/default/images/logo.gif',
+  //   Stores: [
+  //     {
+  //       correo: 'zonadigitalmerliot@gmail.com',
+  //       telefono: '22294957',
+  //       latitud: '13.6779157',
+  //       longitud: '-89.2769987',
+  //     },
+  //     {
+  //       correo: 'zonadigitalmerliot@gmail.com',
+  //       telefono: '22058436',
+  //       latitud: '13.6982079',
+  //       longitud: '-89.1505647',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch8',
+  //   name: 'SoLuNeXxT',
+  //   description:
+  //     'Somos una Empresa de Tecnología ... Desde venta y mantenimiento de computadoras y periféricos, Hosting y Diseño Web, hasta el desarrollo de Aplicaciones.',
+  //   logo: 'http://www.solunexxt.com/img/SoLuNeXxT_03.png',
+  //   Stores: [
+  //     {
+  //       correo: 'ventas@solunexxt.com',
+  //       telefono: '22846969',
+  //       latitud: '13.7168566',
+  //       longitud: '-89.211904',
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 'frch9',
+  //   name: 'Tienda Intelmax',
+  //   description: 'Equipos Electrónicos y más Desde 2006.',
+  //   logo: 'https://tiendaintelmax.net/ntlmx/img/logo.png',
+  //   Stores: [
+  //     {
+  //       correo: 'info@intelmax.net',
+  //       telefono: '25256518',
+  //       latitud: '13.6788127',
+  //       longitud: '-89.2752375',
+  //     },
+  //   ],
+  // },
 ];
 
 export const Details = [
@@ -229,22 +307,22 @@ export const Details = [
       'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
   },
 
-  {
-    id: 'p2',
-    marca: 'Mini PC Asrock',
-    modelo: '90BXG3G01',
-    sistema_operativo: 'Windows 10',
-    memoria: '2 x 2.5" SATA 6Gb disco duro',
-    price: '$166.00',
-    caracteristicas: [
-      ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
-      ' A300W RYZEN -',
-      ' -',
-    ],
-    subCategory: 'sc1',
-    image:
-      'https://aeon.com.sv/web/image/product.product/6379/image_1024/%5B6764%5D%20Mini%20PC%20Asrock%2090BXG3G01%20A300W%20RYZEN?unique=eaa02f9',
-  },
+  // {
+  //   id: 'p2',
+  //   marca: 'Mini PC Asrock',
+  //   modelo: '90BXG3G01',
+  //   sistema_operativo: 'Windows 10',
+  //   memoria: '2 x 2.5" SATA 6Gb disco duro',
+  //   price: '$166.00',
+  //   caracteristicas: [
+  //     ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
+  //     ' A300W RYZEN -',
+  //     ' -',
+  //   ],
+  //   subCategory: 'sc1',
+  //   image:
+  //     'https://aeon.com.sv/web/image/product.product/6379/image_1024/%5B6764%5D%20Mini%20PC%20Asrock%2090BXG3G01%20A300W%20RYZEN?unique=eaa02f9',
+  // },
 
   {
     id: 'p3',

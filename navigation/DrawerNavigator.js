@@ -3,6 +3,7 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
 import {HomeNavigator} from './children/HomeNavigator';
 import {WishListNavigator} from './children/WishListNavigator';
+import {TestNavigator} from './TestNavigator';
 
 export const DrawerNavigator = () => {
   //Creando el DrawerNavigator
@@ -32,6 +33,14 @@ export const DrawerNavigator = () => {
             options={{
               //nombre con el que aparece en el Drawer Menu
               title: 'Lista de deseos',
+            }}
+          />
+          <Drawer.Screen
+            name="Store"
+            component={TestNavigator}
+            options={{
+              //nombre con el que aparece en el Drawer Menu
+              title: 'Tiendas',
             }}
           />
         </Drawer.Navigator>
