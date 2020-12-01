@@ -34,7 +34,7 @@ export const ShopCards = (props) => {
 
   const renderShops = () => {
     return props.selectedShops.map((shop) => {
-      return <ShopCard shop={shop} />;
+      return <ShopCard shop={shop} navigation={props.navigation} />;
     });
   };
 

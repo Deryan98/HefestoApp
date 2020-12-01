@@ -1,12 +1,14 @@
 import * as React from 'react';
-import { useDispatch } from 'react-redux';
-import { createStackNavigator } from '@react-navigation/stack';
-import { CatTabs } from './children/CatTabs';
-import { ProductBottomTabs } from './children/ProductBottomTabs';
+import {useDispatch} from 'react-redux';
+import {createStackNavigator} from '@react-navigation/stack';
+import {CatTabs} from './children/CatTabs';
+import {ProductBottomTabs} from './children/ProductBottomTabs';
 import SearchScreen from '../../screens/SearchScreen';
 import ResultsScreen from '../../screens/ResultsScreen';
+import {StoreNavigator} from './children/StoreNavigator';
 import CategoriesScreen from '../../screens/CategoriesScreen';
 import CategoryMealsScreen from '../../screens/CategoryMealsScreen';
+import ProductDetailScreen from '../../screens/ProductDetailScreen';
 
 //importing custom components
 import DrawerMenu from '../../components/DrawerMenu';
@@ -65,16 +67,41 @@ export const HomeNavigator = ({navigation}) => {
         }}
       />
       <HomeStack.Screen
+        name="StoreNavigator"
+        component={StoreNavigator}
+        options={{headerShown: false}}
+      />
+      {/* <HomeStack.Screen
         name="StoreScreen"
         component={CategoriesScreen}
-        options={{headerShown: false}}
+        options={{
+          headerTintColor: 'chartreuse',
+          title: 'TiendaX',
+          headerStyle: {
+            //color de la app bar
+            backgroundColor: 'black',
+          },
+        }}
       />
 
       <HomeStack.Screen
         name="ProductsStoreScreen"
         component={CategoryMealsScreen}
-        options={{headerShown: false}}
+        options={{
+          headerTintColor: 'chartreuse',
+          title: 'Productos',
+          headerStyle: {
+            //color de la app bar
+            backgroundColor: 'black',
+          },
+        }}
       />
+
+      <HomeStack.Screen
+        name="ProductDetail"
+        component={ProductDetailScreen}
+        options={{headerShown: false}}
+      /> */}
 
       <HomeStack.Screen
         name="ProductBottomTabs"

@@ -35,14 +35,14 @@ export const DrawerNavigator = () => {
               title: 'Lista de deseos',
             }}
           />
-          <Drawer.Screen
+          {/* <Drawer.Screen
             name="Store"
             component={TestNavigator}
             options={{
               //nombre con el que aparece en el Drawer Menu
               title: 'Tiendas',
             }}
-          />
+          /> */}
         </Drawer.Navigator>
       </NavigationContainer>
     </>

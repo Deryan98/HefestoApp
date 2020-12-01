@@ -1,16 +1,17 @@
 import React from 'react';
 import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
-import {Franchisies} from '../data/dummy-data';
+import {Stores} from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
 
 const CategoriesScreen = ({route, navigation}) => {
+  const {Store} = route.params;
   const renderGridItem = (itemData) => {
     const Products = [];
     itemData.item.Products.map((Product) => {
       Products.push(Product);
     });
     //console.log(Products);
-    console.log(navigation);
+    //console.log(navigation);
     return (
       <CategoryGridTile
         title={itemData.item.name}
@@ -30,24 +31,22 @@ const CategoriesScreen = ({route, navigation}) => {
     );
   };
 
-  const Subcategories = [];
+  // const Subcategories = [];
 
-  Franchisies.map((franchisie) => {
-    if (franchisie.id === 'frch1') {
-      franchisie.Stores.map((store) => {
-        store.Subcategories.map((Subcategorie) => {
-          Subcategories.push(Subcategorie);
-        });
-      });
-    }
-  });
+  // Stores.map((store) => {
+  //   if (store.id === 'str1') {
+  //     store.Subcategories.map((Subcategorie) => {
+  //       Subcategories.push(Subcategorie);
+  //     });
+  //   }
+  // });
 
-  console.log(Subcategories);
+  //console.log(Subcategories);
 
   return (
     <FlatList
       keyExtractor={(item, index) => item.id}
-      data={Subcategories}
+      data={Store.Subcategories}
       renderItem={renderGridItem}
       numColumns={2}
     />

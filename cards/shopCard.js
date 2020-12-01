@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, Text, TouchableOpacity} from 'react-native';
+import {View, StyleSheet, Text, Button, TouchableOpacity} from 'react-native';
 import {Avatar} from 'react-native-elements';
 
 const styles = StyleSheet.create({
@@ -24,23 +24,24 @@ const styles = StyleSheet.create({
   rightContainer: {width: '70%', flexDirection: 'column'},
 });
 
-const ShopCard = ({shop}) => {
+const ShopCard = ({shop, navigation}) => {
   return (
-    <TouchableOpacity style={styles.container}>
+    <TouchableOpacity
+      style={styles.container}
+      onPress={() => navigation.navigate('StoreNavigator', {Store: shop})}>
       <View style={styles.leftContainer}>
-        <Avatar
-          source={require('../assets/images/shop.jpg')}
-          rounded
-          size="large"
-        />
+        <Avatar source={{uri: shop.logo}} rounded size="large" />
       </View>
       <View style={styles.rightContainer}>
         <Text style={[styles.shopName, styles.text]}>{shop.name}</Text>
         <Text style={[styles.shopDescription, styles.text]}>
-          Esta es una prueba
+          Correo: {shop.correo}
         </Text>
         <Text style={[styles.shopDescription, styles.text]}>
-          {shop.distance / 1000} km
+          Telefono: {shop.telefono}
+        </Text>
+        <Text style={[styles.shopDescription, styles.text]}>
+          Distancia: {shop.distance / 1000} km
         </Text>
       </View>
     </TouchableOpacity>

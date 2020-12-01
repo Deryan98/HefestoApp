@@ -68,195 +68,177 @@ export const SUBCATEGORIES = [
    */
 ];
 
-export const Franchisies = [
+export const Stores = [
   {
-    id: 'frch1',
+    id: 'str1',
     name: 'AEON',
     description:
       'Somos una empresa dedicada a la venta y distribución de equipos de alto rendimiento para aplicaciones exigentes y equipos Gamer ,servicios tecnológicos e informáticos, diferenciados por nuestra calidad de productos y sistemas seguros, satisfaciendo las necesidades de nuestros clientes con el conocimiento, la tecnología, valores de ética, responsabilidad y trabajo en equipo, logrando la excelencia.',
     logo:
       'https://www.aeon.com.sv/web/image/website/1/logo/Aeon%20Computers?unique=062c6e2',
-    Stores: [
+    correo: 'ventas@aeon.com.sv',
+    telefono: '22103865',
+    coords: {
+      latitude: 13.702328,
+      longitude: -89.237885,
+    },
+    Subcategories: [
       {
-        correo: 'ventas@aeon.com.sv',
-        telefono: '22103865',
-        latitud: '13.702328',
-        longitud: '-89.237885',
-        Subcategories: [
+        id: 'sc1',
+        name: 'Medium',
+        icon: 'laptop-chromebook',
+        iconType: 'material-community',
+        color: 'red',
+        Products: [
           {
-            id: 'sc1',
-            name: 'Medium',
-            icon: 'laptop-chromebook',
-            iconType: 'material-community',
-            color: 'red',
-            Products: [
-              {
-                id: 'p1',
-                marca: 'Mini PC ZOTAC',
-                modelo: 'CI620 NANO',
-                sistema_operativo: 'Windows 10',
-                memoria: 'SSD 120 GB',
-                price: '$399.00',
-                caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
-                subCategory: 'sc2',
-                image:
-                  'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
-              },
-              {
-                id: 'p2',
-                marca: 'Mini PC Asrock',
-                modelo: 'G4930',
-                sistema_operativo: 'Windows 10',
-                memoria: 'SSD 240GB',
-                price: '$332.00',
-                caracteristicas: [
-                  ' 8GB DDR4 -',
-                  ' Intel Celeron G4930 -',
-                  ' -',
-                ],
-                subCategory: 'sc2',
-                image:
-                  'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
-              },
-            ],
+            id: 'p1',
+            marca: 'Mini PC ZOTAC',
+            modelo: 'CI620 NANO',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 120 GB',
+            price: '$399.00',
+            caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
           },
           {
-            id: 'sc2',
-            name: 'Basic',
-            icon: 'laptop',
-            iconType: 'material-community',
-            color: 'yellow',
-            Products: [
-              {
-                id: 'p1',
-                marca: 'Mini PC ZOTAC',
-                modelo: 'CI620 NANO',
-                sistema_operativo: 'Windows 10',
-                memoria: 'SSD 120 GB',
-                price: '$399.00',
-                caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
-                subCategory: 'sc2',
-                image:
-                  'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
-              },
+            id: 'p2',
+            marca: 'Mini PC Asrock',
+            modelo: 'G4930',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 240GB',
+            price: '$332.00',
+            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+          },
+        ],
+      },
+      {
+        id: 'sc2',
+        name: 'Basic',
+        icon: 'laptop',
+        iconType: 'material-community',
+        color: 'yellow',
+        Products: [
+          {
+            id: 'p1',
+            marca: 'Mini PC ZOTAC',
+            modelo: 'CI620 NANO',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 120 GB',
+            price: '$399.00',
+            caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+          },
 
-              {
-                id: 'p2',
-                marca: 'Mini PC Asrock',
-                modelo: 'G4930',
-                sistema_operativo: 'Windows 10',
-                memoria: 'SSD 240GB',
-                price: '$332.00',
-                caracteristicas: [
-                  ' 8GB DDR4 -',
-                  ' Intel Celeron G4930 -',
-                  ' -',
-                ],
-                subCategory: 'sc2',
-                image:
-                  'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
-              },
-            ],
+          {
+            id: 'p2',
+            marca: 'Mini PC Asrock',
+            modelo: 'G4930',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 240GB',
+            price: '$332.00',
+            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
           },
         ],
       },
     ],
+    isSelected: false,
   },
   {
-    id: 'frch2',
+    id: 'str2',
     name: 'KPC Hardware',
     description:
       'KPC Hardware, fue creada como una división de G Group S.A., con la visión de convertirse en empresa líder en ventas y soporte técnico en el mercado de tecnologías para usuario final de gama media y alta en El Salvador.   Tenemos como propósito, representar las mejores marcas de hardware del mercado mundial, que permitan a nuestros clientes de diseño, ingeniería y entusiastas “gamers”, satisfacer y exceder cualquier necesidad que sus equipos demanden, brindando para ello, la debida asesoría técnica que otorgue a nuestros compradores, una inversión efectiva y duradera, además de los precios más justos posibles y la mejor atención personalizada que podamos entregar.  Con énfasis en equipos silenciosos y bajas temperaturas de operación, alargamos la vida útil y maximizamos la inversión que nuestros clientes realizan, cuando adquieren nuestros productos.',
     logo: 'https://kpchardware.com/img/kpc-hardwware-1508193268.jpg',
-    Stores: [
+    correo: 'info@kpchardware.com',
+    telefono: '22337600',
+    coords: {
+      latitude: 13.702978,
+      longitude: -89.245679,
+    },
+    Subcategories: [
       {
-        correo: 'info@kpchardware.com',
-        telefono: '22337600',
-        latitud: '13.702978',
-        longitud: '-89.245679',
-        Subcategories: [
+        id: 'sc1',
+        name: 'Design',
+        icon: 'video-3d-variant',
+        iconType: 'material-community',
+        color: 'red',
+        Products: [
           {
-            id: 'sc1',
-            name: 'Design',
-            icon: 'video-3d-variant',
-            iconType: 'material-community',
-            color: 'red',
-            Products: [
-              {
-                id: 'p1',
-                marca: 'LAPTOP APPLE MACBOOK AIR',
-                modelo: 'MVH22E/A',
-                sistema_operativo: 'Mac',
-                memoria: 'SSD 512GB',
-                price: '$1,949.00',
-                caracteristicas: [
-                  ' 8 GB Ram -',
-                  ' INTEL CORE I5 -',
-                  '13 Pulgadas',
-                ],
-                subCategory: 'sc4',
-                image:
-                  'https://www.officedepot.com.sv/medias/32718.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MzA3NzI0fGltYWdlL2pwZWd8aDljL2g0My85ODc3NjY0ODI1Mzc0LmpwZ3xkYTc2YTcyOTI3OWUwY2Y1MmQxYWJjYjE3ZjA1M2Q0NjM1M2IzNjQ3Y2ViMzBjYWIzY2FkZGUyZmFmMjA2YTY5',
-              },
-              {
-                id: 'p9',
-                marca: 'DELL',
-                modelo: 'LATITUDE 5490',
-                sistema_operativo: 'Windows 10 PRO',
-                memoria: 'SSD 256GB',
-                price: '$1,599.00',
-                caracteristicas: [
-                  ' RAM 8GB -',
-                  ' INTEL CORE I7 8650U -',
-                  ' PANTALLA LED HD 14',
-                ],
-                subCategory: 'sc4',
-                image:
-                  'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
-              },
-            ],
+            id: 'p1',
+            marca: 'LAPTOP APPLE MACBOOK AIR',
+            modelo: 'MVH22E/A',
+            sistema_operativo: 'Mac',
+            memoria: 'SSD 512GB',
+            price: '$1,949.00',
+            caracteristicas: [' 8 GB Ram -', ' INTEL CORE I5 -', '13 Pulgadas'],
+            subCategory: 'sc4',
+            image:
+              'https://www.officedepot.com.sv/medias/32718.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MzA3NzI0fGltYWdlL2pwZWd8aDljL2g0My85ODc3NjY0ODI1Mzc0LmpwZ3xkYTc2YTcyOTI3OWUwY2Y1MmQxYWJjYjE3ZjA1M2Q0NjM1M2IzNjQ3Y2ViMzBjYWIzY2FkZGUyZmFmMjA2YTY5',
           },
           {
-            id: 'sc2',
-            name: 'Basic',
-            icon: 'laptop',
-            iconType: 'material-community',
-            color: 'yellow',
-            Products: [
-              {
-                id: 'p1',
-                marca: 'Mini PC ZOTAC',
-                modelo: 'CI620 NANO',
-                sistema_operativo: 'Windows 10',
-                memoria: 'SSD 120 GB',
-                price: '$399.00',
-                caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
-                subCategory: 'sc2',
-                image:
-                  'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
-              },
-
-              {
-                id: 'p2',
-                marca: 'Mini PC Asrock',
-                modelo: 'G4930',
-                sistema_operativo: 'Windows 10',
-                memoria: 'SSD 240GB',
-                price: '$332.00',
-                caracteristicas: [
-                  ' 8GB DDR4 -',
-                  ' Intel Celeron G4930 -',
-                  ' -',
-                ],
-                subCategory: 'sc2',
-                image:
-                  'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
-              },
+            id: 'p9',
+            marca: 'DELL',
+            modelo: 'LATITUDE 5490',
+            sistema_operativo: 'Windows 10 PRO',
+            memoria: 'SSD 256GB',
+            price: '$1,599.00',
+            caracteristicas: [
+              ' RAM 8GB -',
+              ' INTEL CORE I7 8650U -',
+              ' PANTALLA LED HD 14',
             ],
+            subCategory: 'sc4',
+            image:
+              'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+          },
+        ],
+      },
+      {
+        id: 'sc2',
+        name: 'Basic',
+        icon: 'laptop',
+        iconType: 'material-community',
+        color: 'yellow',
+        Products: [
+          {
+            id: 'p1',
+            marca: 'Mini PC ZOTAC',
+            modelo: 'CI620 NANO',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 120 GB',
+            price: '$399.00',
+            caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+          },
+
+          {
+            id: 'p2',
+            marca: 'Mini PC Asrock',
+            modelo: 'G4930',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 240GB',
+            price: '$332.00',
+            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
           },
         ],
       },
     ],
+    isSelected: false,
   },
   // {
   //   id: 'frch3',
@@ -385,6 +367,7 @@ export const Details = [
     subCategory: 'sc1',
     image:
       'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
+    Stores: ['str1'],
   },
   {
     id: 'p3',
@@ -401,6 +384,7 @@ export const Details = [
     subCategory: 'sc1',
     image:
       'https://aeon.com.sv/web/image/product.product/6309/image_1024/%5B6763%5D%20Mini%20PC%20Asrock%20%2090BXG3701-A20BAOW%20intel?unique=5cc788f',
+    Stores: ['str2'],
   },
 
   {
@@ -414,6 +398,7 @@ export const Details = [
     subCategory: 'sc2',
     image:
       'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+    Stores: ['str1'],
   },
 
   {
@@ -427,6 +412,7 @@ export const Details = [
     subCategory: 'sc2',
     image:
       'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+    Stores: ['str2'],
   },
 
   {
@@ -443,6 +429,7 @@ export const Details = [
     ],
     subCategory: 'sc3',
     image: 'https://kpchardware.com/img/p/1/0/0/7/8/10078-home_default.jpg',
+    Stores: ['str1'],
   },
 
   {
@@ -456,6 +443,7 @@ export const Details = [
     subCategory: 'sc3',
     image:
       'https://www.kayfastore.com/assets/images/galleries/1591026754142230.jpg',
+    Stores: ['str2'],
   },
 
   {
@@ -473,6 +461,7 @@ export const Details = [
     subCategory: 'sc4',
     image:
       'https://aeon.com.sv/web/image/product.product/6726/image_1024/CPU%20Panzer%20PRO%203700X%2C%2016GB%20Ram%2C%20SSD%20240GB%2C%201TB%20HDD%2C%20RX%205700%2C%2080+Bronze%20%2816GB%2C%20SSD240%2C%20Cooler%20de%20Stock%29?unique=3d76064',
+    Stores: ['str1'],
   },
 
   {
@@ -490,6 +479,7 @@ export const Details = [
     subCategory: 'sc4',
     image:
       'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+    Stores: ['str2'],
   },
 
   {
@@ -503,6 +493,7 @@ export const Details = [
     subCategory: 'sc5',
     image:
       'https://aeon.com.sv/web/image/product.product/6803/image_1024/CPU%20Gaming%20MeshTown%2C%20Ryzen%203%203100%2C%2016GB%20RAM%2C%20SSD%20240GB%2C%20RX580%208GB%2C%20600W%2080+%20RGB%20%28Ryzen%203100%29?unique=2c012b4',
+    Stores: ['str1'],
   },
 
   {
@@ -516,6 +507,7 @@ export const Details = [
     subCategory: 'sc5',
     image:
       'https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg',
+    Stores: ['str1'],
   },
 
   {
@@ -529,6 +521,7 @@ export const Details = [
     subCategory: 'sc6',
     image:
       'https://xht.com.sv/wp-content/uploads/2020/08/photo_2020-08-19_22-06-55.jpg',
+    Stores: ['str1'],
   },
 
   {
@@ -542,6 +535,7 @@ export const Details = [
     subCategory: 'sc6',
     image:
       'https://xht.com.sv/wp-content/uploads/2020/09/Computadora-AMD-Ryzen-3-3200G-8GB.jpg',
+    Stores: ['str1'],
   },
 ];
 

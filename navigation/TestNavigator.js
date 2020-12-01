@@ -8,17 +8,19 @@ import {createStackNavigator} from '@react-navigation/stack';
 import ProductDetailScreen from '../screens/ProductDetailScreen';
 import {Icon, Input} from 'react-native-elements';
 
-export const TestNavigator = ({navigation}) => {
+export const TestNavigator = ({route, navigation}) => {
   const TestStack = createStackNavigator();
+  const {Store} = route.params;
   return (
     // <NavigationContainer>
     <TestStack.Navigator initialRouteName="CategoriesScreen">
       <TestStack.Screen
         name="CategoriesScreen"
         component={CategoriesScreen}
+        initialParams={{...route.params}}
         options={{
           headerTintColor: 'chartreuse',
-          title: 'TiendaX',
+          title: Store.name,
           headerStyle: {
             //color de la app bar
             backgroundColor: 'black',

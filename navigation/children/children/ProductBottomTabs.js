@@ -33,6 +33,7 @@ export const ProductBottomTabs = ({route}) => {
       <ProductBottomTab.Screen
         name="ProductMap"
         component={MapScreen}
+        initialParams={{...route.params}}
         options={{
           tabBarLabel: 'Tiendas',
           tabBarIcon: ({color, size}) => (

@@ -12,7 +12,7 @@ const HomeScreen = ({route, navigation}) => {
   const displayedProducts = Details.filter(
     (product) => product.subCategory === subCatId,
   );
-  console.log(displayedProducts);
+  //console.log(displayedProducts);
   return (
     <ProductList
       route={route}
