@@ -31,12 +31,15 @@ const CategoriesScreen = ({route, navigation}) => {
   };
 
   const Subcategories = [];
+
   Franchisies.map((franchisie) => {
-    franchisie.Stores.map((store) => {
-      store.Subcategories.map((Subcategorie) => {
-        Subcategories.push(Subcategorie);
+    if (franchisie.id === 'frch1') {
+      franchisie.Stores.map((store) => {
+        store.Subcategories.map((Subcategorie) => {
+          Subcategories.push(Subcategorie);
+        });
       });
-    });
+    }
   });
 
   console.log(Subcategories);

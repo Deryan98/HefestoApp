@@ -102,7 +102,6 @@ export const Franchisies = [
                 image:
                   'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
               },
-
               {
                 id: 'p2',
                 marca: 'Mini PC Asrock',
@@ -163,21 +162,102 @@ export const Franchisies = [
       },
     ],
   },
-  // {
-  //   id: 'frch2',
-  //   name: 'KPC Hardware',
-  //   description:
-  //     'KPC Hardware, fue creada como una división de G Group S.A., con la visión de convertirse en empresa líder en ventas y soporte técnico en el mercado de tecnologías para usuario final de gama media y alta en El Salvador.   Tenemos como propósito, representar las mejores marcas de hardware del mercado mundial, que permitan a nuestros clientes de diseño, ingeniería y entusiastas “gamers”, satisfacer y exceder cualquier necesidad que sus equipos demanden, brindando para ello, la debida asesoría técnica que otorgue a nuestros compradores, una inversión efectiva y duradera, además de los precios más justos posibles y la mejor atención personalizada que podamos entregar.  Con énfasis en equipos silenciosos y bajas temperaturas de operación, alargamos la vida útil y maximizamos la inversión que nuestros clientes realizan, cuando adquieren nuestros productos.',
-  //   logo: 'https://kpchardware.com/img/kpc-hardwware-1508193268.jpg',
-  //   Stores: [
-  //     {
-  //       correo: 'info@kpchardware.com',
-  //       telefono: '22337600',
-  //       latitud: '13.702978',
-  //       longitud: '-89.245679',
-  //     },
-  //   ],
-  // },
+  {
+    id: 'frch2',
+    name: 'KPC Hardware',
+    description:
+      'KPC Hardware, fue creada como una división de G Group S.A., con la visión de convertirse en empresa líder en ventas y soporte técnico en el mercado de tecnologías para usuario final de gama media y alta en El Salvador.   Tenemos como propósito, representar las mejores marcas de hardware del mercado mundial, que permitan a nuestros clientes de diseño, ingeniería y entusiastas “gamers”, satisfacer y exceder cualquier necesidad que sus equipos demanden, brindando para ello, la debida asesoría técnica que otorgue a nuestros compradores, una inversión efectiva y duradera, además de los precios más justos posibles y la mejor atención personalizada que podamos entregar.  Con énfasis en equipos silenciosos y bajas temperaturas de operación, alargamos la vida útil y maximizamos la inversión que nuestros clientes realizan, cuando adquieren nuestros productos.',
+    logo: 'https://kpchardware.com/img/kpc-hardwware-1508193268.jpg',
+    Stores: [
+      {
+        correo: 'info@kpchardware.com',
+        telefono: '22337600',
+        latitud: '13.702978',
+        longitud: '-89.245679',
+        Subcategories: [
+          {
+            id: 'sc1',
+            name: 'Design',
+            icon: 'video-3d-variant',
+            iconType: 'material-community',
+            color: 'red',
+            Products: [
+              {
+                id: 'p1',
+                marca: 'LAPTOP APPLE MACBOOK AIR',
+                modelo: 'MVH22E/A',
+                sistema_operativo: 'Mac',
+                memoria: 'SSD 512GB',
+                price: '$1,949.00',
+                caracteristicas: [
+                  ' 8 GB Ram -',
+                  ' INTEL CORE I5 -',
+                  '13 Pulgadas',
+                ],
+                subCategory: 'sc4',
+                image:
+                  'https://www.officedepot.com.sv/medias/32718.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MzA3NzI0fGltYWdlL2pwZWd8aDljL2g0My85ODc3NjY0ODI1Mzc0LmpwZ3xkYTc2YTcyOTI3OWUwY2Y1MmQxYWJjYjE3ZjA1M2Q0NjM1M2IzNjQ3Y2ViMzBjYWIzY2FkZGUyZmFmMjA2YTY5',
+              },
+              {
+                id: 'p9',
+                marca: 'DELL',
+                modelo: 'LATITUDE 5490',
+                sistema_operativo: 'Windows 10 PRO',
+                memoria: 'SSD 256GB',
+                price: '$1,599.00',
+                caracteristicas: [
+                  ' RAM 8GB -',
+                  ' INTEL CORE I7 8650U -',
+                  ' PANTALLA LED HD 14',
+                ],
+                subCategory: 'sc4',
+                image:
+                  'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+              },
+            ],
+          },
+          {
+            id: 'sc2',
+            name: 'Basic',
+            icon: 'laptop',
+            iconType: 'material-community',
+            color: 'yellow',
+            Products: [
+              {
+                id: 'p1',
+                marca: 'Mini PC ZOTAC',
+                modelo: 'CI620 NANO',
+                sistema_operativo: 'Windows 10',
+                memoria: 'SSD 120 GB',
+                price: '$399.00',
+                caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
+                subCategory: 'sc2',
+                image:
+                  'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+              },
+
+              {
+                id: 'p2',
+                marca: 'Mini PC Asrock',
+                modelo: 'G4930',
+                sistema_operativo: 'Windows 10',
+                memoria: 'SSD 240GB',
+                price: '$332.00',
+                caracteristicas: [
+                  ' 8GB DDR4 -',
+                  ' Intel Celeron G4930 -',
+                  ' -',
+                ],
+                subCategory: 'sc2',
+                image:
+                  'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
   // {
   //   id: 'frch3',
   //   name: 'XHT',
@@ -306,24 +386,6 @@ export const Details = [
     image:
       'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
   },
-
-  // {
-  //   id: 'p2',
-  //   marca: 'Mini PC Asrock',
-  //   modelo: '90BXG3G01',
-  //   sistema_operativo: 'Windows 10',
-  //   memoria: '2 x 2.5" SATA 6Gb disco duro',
-  //   price: '$166.00',
-  //   caracteristicas: [
-  //     ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
-  //     ' A300W RYZEN -',
-  //     ' -',
-  //   ],
-  //   subCategory: 'sc1',
-  //   image:
-  //     'https://aeon.com.sv/web/image/product.product/6379/image_1024/%5B6764%5D%20Mini%20PC%20Asrock%2090BXG3G01%20A300W%20RYZEN?unique=eaa02f9',
-  // },
-
   {
     id: 'p3',
     marca: 'Mini PC Asrock',
