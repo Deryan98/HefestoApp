@@ -12,7 +12,10 @@ const ProductList = (props) => {
           price={itemData.item.price}
           image={itemData.item.image}
           onSelectProduct={() => {
-            if (props.route.name == 'ProductsStoreScreen') {
+            if (
+              props.route.name == 'ProductsStoreScreen' ||
+              props.route.name == 'WishList'
+            ) {
               props.navigation.navigate('ProductDetail', {
                 product: itemData.item,
                 routename: props.route,

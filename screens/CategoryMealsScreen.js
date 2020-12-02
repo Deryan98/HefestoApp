@@ -1,18 +1,23 @@
 import React from 'react';
-import {useSelector} from 'react-redux';
-import {Text} from 'react-native';
-import {Franchisies} from '../data/dummy-data';
+import {Details} from '../data/dummy-data';
 import ProductList from '../components/ProductList';
 
 const CategoryMealScreen = ({route, navigation}) => {
   const {Products} = route.params;
+  const products = [];
 
-  console.log(route);
+  Products.map((product) => {
+    Details.map((detail) => {
+      if (product.id == detail.id) {
+        products.push(detail);
+      }
+    });
+  });
 
   // return <Text> Soy una pantalla</Text>;
 
   return (
-    <ProductList route={route} listData={Products} navigation={navigation} />
+    <ProductList route={route} listData={products} navigation={navigation} />
   );
 };
 

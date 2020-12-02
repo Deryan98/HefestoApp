@@ -84,40 +84,22 @@ export const Stores = [
     },
     Subcategories: [
       {
-        id: 'sc1',
+        id: 'sc2',
         name: 'Medium',
         icon: 'laptop-chromebook',
         iconType: 'material-community',
         color: 'red',
         Products: [
           {
-            id: 'p1',
-            marca: 'Mini PC ZOTAC',
-            modelo: 'CI620 NANO',
-            sistema_operativo: 'Windows 10',
-            memoria: 'SSD 120 GB',
-            price: '$399.00',
-            caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
-            subCategory: 'sc2',
-            image:
-              'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
+            id: 'p3',
           },
           {
-            id: 'p2',
-            marca: 'Mini PC Asrock',
-            modelo: 'G4930',
-            sistema_operativo: 'Windows 10',
-            memoria: 'SSD 240GB',
-            price: '$332.00',
-            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
-            subCategory: 'sc2',
-            image:
-              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
+            id: 'p4',
           },
         ],
       },
       {
-        id: 'sc2',
+        id: 'sc1',
         name: 'Basic',
         icon: 'laptop',
         iconType: 'material-community',
@@ -125,28 +107,10 @@ export const Stores = [
         Products: [
           {
             id: 'p1',
-            marca: 'Mini PC ZOTAC',
-            modelo: 'CI620 NANO',
-            sistema_operativo: 'Windows 10',
-            memoria: 'SSD 120 GB',
-            price: '$399.00',
-            caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
-            subCategory: 'sc2',
-            image:
-              'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
           },
 
           {
             id: 'p2',
-            marca: 'Mini PC Asrock',
-            modelo: 'G4930',
-            sistema_operativo: 'Windows 10',
-            memoria: 'SSD 240GB',
-            price: '$332.00',
-            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
-            subCategory: 'sc2',
-            image:
-              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
           },
         ],
       },
@@ -167,44 +131,22 @@ export const Stores = [
     },
     Subcategories: [
       {
-        id: 'sc1',
+        id: 'sc4',
         name: 'Design',
         icon: 'video-3d-variant',
         iconType: 'material-community',
         color: 'red',
         Products: [
           {
-            id: 'p1',
-            marca: 'LAPTOP APPLE MACBOOK AIR',
-            modelo: 'MVH22E/A',
-            sistema_operativo: 'Mac',
-            memoria: 'SSD 512GB',
-            price: '$1,949.00',
-            caracteristicas: [' 8 GB Ram -', ' INTEL CORE I5 -', '13 Pulgadas'],
-            subCategory: 'sc4',
-            image:
-              'https://www.officedepot.com.sv/medias/32718.jpg-1200ftw?context=bWFzdGVyfHJvb3R8MzA3NzI0fGltYWdlL2pwZWd8aDljL2g0My85ODc3NjY0ODI1Mzc0LmpwZ3xkYTc2YTcyOTI3OWUwY2Y1MmQxYWJjYjE3ZjA1M2Q0NjM1M2IzNjQ3Y2ViMzBjYWIzY2FkZGUyZmFmMjA2YTY5',
+            id: 'p7',
           },
           {
-            id: 'p9',
-            marca: 'DELL',
-            modelo: 'LATITUDE 5490',
-            sistema_operativo: 'Windows 10 PRO',
-            memoria: 'SSD 256GB',
-            price: '$1,599.00',
-            caracteristicas: [
-              ' RAM 8GB -',
-              ' INTEL CORE I7 8650U -',
-              ' PANTALLA LED HD 14',
-            ],
-            subCategory: 'sc4',
-            image:
-              'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+            id: 'p8',
           },
         ],
       },
       {
-        id: 'sc2',
+        id: 'sc1',
         name: 'Basic',
         icon: 'laptop',
         iconType: 'material-community',
@@ -212,66 +154,138 @@ export const Stores = [
         Products: [
           {
             id: 'p1',
-            marca: 'Mini PC ZOTAC',
-            modelo: 'CI620 NANO',
-            sistema_operativo: 'Windows 10',
-            memoria: 'SSD 120 GB',
-            price: '$399.00',
-            caracteristicas: [' DDR4 4GB -', ' intel I3-8130U -', ' -'],
-            subCategory: 'sc2',
-            image:
-              'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
           },
 
           {
             id: 'p2',
-            marca: 'Mini PC Asrock',
-            modelo: 'G4930',
-            sistema_operativo: 'Windows 10',
-            memoria: 'SSD 240GB',
-            price: '$332.00',
-            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
-            subCategory: 'sc2',
-            image:
-              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
           },
         ],
       },
     ],
     isSelected: false,
   },
-  // {
-  //   id: 'frch3',
-  //   name: 'XHT',
-  //   description:
-  //     'Xtreme Hardware Technology , Productos Garantizados Al Mejor Precio y Con La Mejor Calidad. Escribenos , Recuerda Si no lo tenemos ¡lo conseguimos!',
-  //   logo:
-  //     'https://xht.com.sv/wp-content/uploads/2020/04/xht-logo-black.png.webp',
-  //   Stores: [
-  //     {
-  //       correo: 'xht@gmail.com',
-  //       telefono: '25275703',
-  //       latitud: '13.675334',
-  //       longitud: '-89.263428',
-  //     },
-  //   ],
-  // },
-  // {
-  //   id: 'frch4',
-  //   name: 'Kaifa Store',
-  //   description:
-  //     'Somos una empresa 100% Salvadoreña  dedicada a brindarle lo más novedoso en Computadoras de Alto Rendimiento y sus componentes principales. Con productos de las mejores marcas internacionales en línea de Cases, Procesadores, Disipadores, Moherboards, Tarjetas de Video, Memoria Ram, Discos Duros, SSD, Enfriamiento líquido Laptops y Periféricos como Impresores, Proyectores Teclados, Mouse Básicos y Gaming entre otros.',
-  //   logo:
-  //     'https://www.kayfastore.com/assets/images/15985687241569288848kayfa.png',
-  //   Stores: [
-  //     {
-  //       correo: 'kayfa.info49@gmail.com',
-  //       telefono: '22604027',
-  //       latitud: '13.7008341',
-  //       longitud: '-89.2202497',
-  //     },
-  //   ],
-  // },
+  {
+    id: 'str3',
+    name: 'XHT',
+    description:
+      'Xtreme Hardware Technology , Productos Garantizados Al Mejor Precio y Con La Mejor Calidad. Escribenos , Recuerda Si no lo tenemos ¡lo conseguimos!',
+    logo:
+      'https://scontent.fsal5-1.fna.fbcdn.net/v/t1.0-9/43524475_1146098055541118_6706809367934533632_o.png?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=X23_W_gqXCEAX9tfqb1&_nc_ht=scontent.fsal5-1.fna&oh=3ea892b194b4c5faca49539667f07512&oe=5FEB2F2A',
+    correo: 'xht@gmail.com',
+    telefono: '25275703',
+    coords: {
+      latitude: 13.675334,
+      longitude: -89.263428,
+    },
+    Subcategories: [
+      {
+        id: 'sc3',
+        name: 'High',
+        icon: 'laptop-mac',
+        iconType: 'material-community',
+        color: 'green',
+        Products: [
+          {
+            id: 'p5',
+          },
+          {
+            id: 'p6',
+          },
+        ],
+      },
+      {
+        id: 'sc4',
+        name: 'Design',
+        icon: 'video-3d-variant',
+        iconType: 'material-community',
+        color: 'red',
+        Products: [
+          {
+            id: 'p7',
+          },
+          {
+            id: 'p8',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'str4',
+    name: 'Kaifa Store',
+    description:
+      'Somos una empresa 100% Salvadoreña  dedicada a brindarle lo más novedoso en Computadoras de Alto Rendimiento y sus componentes principales. Con productos de las mejores marcas internacionales en línea de Cases, Procesadores, Disipadores, Moherboards, Tarjetas de Video, Memoria Ram, Discos Duros, SSD, Enfriamiento líquido Laptops y Periféricos como Impresores, Proyectores Teclados, Mouse Básicos y Gaming entre otros.',
+    logo:
+      'https://scontent.fsal5-1.fna.fbcdn.net/v/t31.0-8/25488441_1517593111695710_8058745423180531550_o.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=XbgLHLaErogAX_dnMJ0&_nc_oc=AQliebC5kfqP0EHzwLqcT4tqv5XmIGC531vYjhC0w4okMfCP844I4ogeOHBXThOSdOg&_nc_ht=scontent.fsal5-1.fna&oh=da0df58bdc5fc5064c0f4e81f4c7cf26&oe=5FED6AF5',
+    correo: 'kayfa.info49@gmail.com',
+    telefono: '22604027',
+    coords: {
+      latitude: 13.7008341,
+      longitude: -89.2202497,
+    },
+    Subcategories: [
+      {
+        id: 'sc2',
+        name: 'Medium',
+        icon: 'laptop-chromebook',
+        iconType: 'material-community',
+        color: 'red',
+        Products: [
+          {
+            id: 'p3',
+          },
+          {
+            id: 'p4',
+          },
+        ],
+      },
+      {
+        id: 'sc3',
+        name: 'High',
+        icon: 'laptop-mac',
+        iconType: 'material-community',
+        color: 'green',
+        Products: [
+          {
+            id: 'p5',
+          },
+          {
+            id: 'p6',
+          },
+        ],
+      },
+      {
+        id: 'sc4',
+        name: 'Design',
+        icon: 'video-3d-variant',
+        iconType: 'material-community',
+        color: 'red',
+        Products: [
+          {
+            id: 'p7',
+          },
+          {
+            id: 'p8',
+          },
+        ],
+      },
+      {
+        id: 'sc5',
+        name: 'Gaming',
+        icon: 'gamepad-variant',
+        iconType: 'material-community',
+        color: 'cyan',
+        Products: [
+          {
+            id: 'p9',
+          },
+          {
+            id: 'p10',
+          },
+        ],
+      },
+    ],
+  },
   // {
   //   id: 'frch5',
   //   name: 'PC MUNDO',
@@ -367,10 +381,10 @@ export const Details = [
     subCategory: 'sc1',
     image:
       'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
-    Stores: ['str1'],
+    Stores: ['str1', 'str2'],
   },
   {
-    id: 'p3',
+    id: 'p2',
     marca: 'Mini PC Asrock',
     modelo: '90BXG3701',
     sistema_operativo: 'Windows 10',
@@ -384,11 +398,11 @@ export const Details = [
     subCategory: 'sc1',
     image:
       'https://aeon.com.sv/web/image/product.product/6309/image_1024/%5B6763%5D%20Mini%20PC%20Asrock%20%2090BXG3701-A20BAOW%20intel?unique=5cc788f',
-    Stores: ['str2'],
+    Stores: ['str1', 'str2'],
   },
 
   {
-    id: 'p4',
+    id: 'p3',
     marca: 'Mini PC ZOTAC',
     modelo: 'CI620 NANO',
     sistema_operativo: 'Windows 10',
@@ -398,11 +412,11 @@ export const Details = [
     subCategory: 'sc2',
     image:
       'https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622',
-    Stores: ['str1'],
+    Stores: ['str1', 'str4'],
   },
 
   {
-    id: 'p5',
+    id: 'p4',
     marca: 'Mini PC Asrock',
     modelo: 'G4930',
     sistema_operativo: 'Windows 10',
@@ -412,11 +426,11 @@ export const Details = [
     subCategory: 'sc2',
     image:
       'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',
-    Stores: ['str2'],
+    Stores: ['str1', 'str4'],
   },
 
   {
-    id: 'p6',
+    id: 'p5',
     marca: 'HP',
     modelo: 'PROBOOK 440 G7',
     sistema_operativo: 'Windows 10 Pro 64-bit',
@@ -429,11 +443,11 @@ export const Details = [
     ],
     subCategory: 'sc3',
     image: 'https://kpchardware.com/img/p/1/0/0/7/8/10078-home_default.jpg',
-    Stores: ['str1'],
+    Stores: ['str3', 'str4'],
   },
 
   {
-    id: 'p7',
+    id: 'p6',
     marca: 'HP',
     modelo: 'OMEN 15-dc1002la',
     sistema_operativo: 'Windows 10',
@@ -443,11 +457,11 @@ export const Details = [
     subCategory: 'sc3',
     image:
       'https://www.kayfastore.com/assets/images/galleries/1591026754142230.jpg',
-    Stores: ['str2'],
+    Stores: ['str3', 'str4'],
   },
 
   {
-    id: 'p8',
+    id: 'p7',
     marca: 'CPU Panzer',
     modelo: 'PRO 3700X',
     sistema_operativo: 'Windows 10',
@@ -460,12 +474,12 @@ export const Details = [
     ],
     subCategory: 'sc4',
     image:
-      'https://aeon.com.sv/web/image/product.product/6726/image_1024/CPU%20Panzer%20PRO%203700X%2C%2016GB%20Ram%2C%20SSD%20240GB%2C%201TB%20HDD%2C%20RX%205700%2C%2080+Bronze%20%2816GB%2C%20SSD240%2C%20Cooler%20de%20Stock%29?unique=3d76064',
-    Stores: ['str1'],
+      'https://scontent.fsal1-1.fna.fbcdn.net/v/t1.0-9/121537082_3324789797570024_5551759657868526251_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=-0IBZzPn8zkAX92diQB&_nc_ht=scontent.fsal1-1.fna&oh=996b39a38967891120b76fa4afcaa1f9&oe=5FEE504B',
+    Stores: ['str2', 'str3', 'str4'],
   },
 
   {
-    id: 'p9',
+    id: 'p8',
     marca: 'DELL',
     modelo: 'LATITUDE 5490',
     sistema_operativo: 'Windows 10 PRO',
@@ -479,11 +493,11 @@ export const Details = [
     subCategory: 'sc4',
     image:
       'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
-    Stores: ['str2'],
+    Stores: ['str2', 'str3', 'str4'],
   },
 
   {
-    id: 'p10',
+    id: 'p9',
     marca: 'MeshTown',
     modelo: 'CPU Gaming',
     sistema_operativo: 'Windows 10 PRO',
@@ -493,11 +507,11 @@ export const Details = [
     subCategory: 'sc5',
     image:
       'https://aeon.com.sv/web/image/product.product/6803/image_1024/CPU%20Gaming%20MeshTown%2C%20Ryzen%203%203100%2C%2016GB%20RAM%2C%20SSD%20240GB%2C%20RX580%208GB%2C%20600W%2080+%20RGB%20%28Ryzen%203100%29?unique=2c012b4',
-    Stores: ['str1'],
+    Stores: ['str1', 'str4'],
   },
 
   {
-    id: 'p11',
+    id: 'p10',
     marca: 'Acer',
     modelo: 'Nitro 5',
     sistema_operativo: 'Windows 10 Home',
@@ -507,11 +521,11 @@ export const Details = [
     subCategory: 'sc5',
     image:
       'https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg',
-    Stores: ['str1'],
+    Stores: ['str1', 'str4'],
   },
 
   {
-    id: 'p12',
+    id: 'p11',
     marca: 'Computadora Completa',
     modelo: 'GT710',
     sistema_operativo: 'Windows 10 Home',
@@ -525,7 +539,7 @@ export const Details = [
   },
 
   {
-    id: 'p13',
+    id: 'p12',
     marca: 'Computadora AMD Ryzen 3',
     modelo: '3200G',
     sistema_operativo: 'Windows 10 Home',
