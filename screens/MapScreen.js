@@ -9,49 +9,6 @@ import ShopCards from '../cards/shopsCards';
 import {Icon, Button} from 'react-native-elements';
 import {Stores} from '../data/dummy-data';
 
-// const stores = [
-//   {
-//     name: 'Tienda #1',
-//     coords: {
-//       latitude: 13.691409625071365,
-//       longitude: -89.26434366032481,
-//     },
-//     isSelected: false,
-//   },
-//   {
-//     name: 'Tienda #2',
-//     coords: {
-//       latitude: 13.706465262797082,
-//       longitude: -89.26884407177567,
-//     },
-//     isSelected: false,
-//   },
-//   {
-//     name: 'Tienda #3',
-//     coords: {
-//       latitude: 13.700954529189467,
-//       longitude: -89.29187318310142,
-//     },
-//     isSelected: false,
-//   },
-//   {
-//     name: 'Tienda #4',
-//     coords: {
-//       latitude: 13.677929418601224,
-//       longitude: -89.2874408327043,
-//     },
-//     isSelected: false,
-//   },
-//   {
-//     name: 'Tienda #5',
-//     coords: {
-//       latitude: 13.680839157572201,
-//       longitude: -89.27240939810872,
-//     },
-//     isSelected: false,
-//   },
-// ];
-
 function MapScreen({route, navigation}) {
   const {product} = route.params;
 

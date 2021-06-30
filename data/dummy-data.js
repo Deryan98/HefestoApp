@@ -5,17 +5,17 @@ import Product from '../models/Product';
 import Brand from '../models/Brand';
 import { useEffect, useState } from 'react';
 
-export default function GetData() {
-  const [data, setData] = useState([]);
+const [Stores, setStores] = useState([]);
 
-  useEffect (() => {
+useEffect (() => {
+  try {
     const getStores = async () => {
       fetch("https://tiendas-a18ea-default-rtdb.firebaseio.com/tiendas.json")
       .then(response => response.json())
-      .then(data => { setData(data); });
+      .then(data => { setStores(data); });
     }
-  });
-};
+  } catch (response) { console.log("F de Fallo xd") };
+});
 
 export const CATEGORIES = [
   new Category('c1', 'Computadora', 'laptop'),
@@ -485,3 +485,5 @@ export const Details = [
     Stores: ['str1'],
   },
 ];
+
+export { Stores };
