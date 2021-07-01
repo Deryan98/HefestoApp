@@ -1,14 +1,14 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {Stores} from '../data/dummy-data';
-import ProductList from '../components/ProductList';
+import StoreList from '../components/StoreList';
 
 
 const StoreScreen = ({route, navigation}) => {
   //obtenemos el id de la subcategoria
   const stores = Stores;
   return (
-    <ProductList
+    <StoreList
       route={route}
       listData={stores}
       navigation={navigation}
