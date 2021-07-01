@@ -1,8 +1,8 @@
 import {API_DEV} from '../constants/Url';
 
-export const getAllProducts = () => {
+export const getAllProducts = async () => {
     const Url = `${API_DEV}/productos.json`;
-    return fetch(Url)
-    .then( response => response.json() )
-    .then( data => data );
+    const response = await fetch(Url);
+    const data = await response.json();
+    return data;
 };

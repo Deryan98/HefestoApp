@@ -2,13 +2,13 @@ import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {SUBCATEGORIES, PRODUCTS} from '../data/dummy-data';
 import ProductList from '../components/ProductList';
-import {Details} from '../data/dummy-data';
+//import {Details} from '../data/dummy-data';
 
 import {getAllProducts} from '../api/products';
 
 const HomeScreen = ({route, navigation}) => {
 
-  const [Products, setProducts] = useState([]);
+  const [Details, setProducts] = useState([]);
 
   const [Loading, setLoading] = useState(true);
   
@@ -32,7 +32,7 @@ const HomeScreen = ({route, navigation}) => {
   const subCatId = SUBCATEGORIES.find((subcat) => subcat.title === route.name)
     .id;
   //filtra los productos x categoria
-  const displayedProducts = Details.filter(
+  const displayedProducts = Object.values(Details).filter(
     (product) => product.subCategory === subCatId,
   );
   //console.log(displayedProducts);
