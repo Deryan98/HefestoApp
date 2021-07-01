@@ -174,56 +174,6 @@ function MapStoreScreen({route, navigation}) {
       longitude: userCoords.longitude,
     };
 
-    let isInside = getDistance(mapPressedCoordinate, userCoordsLatLon);
-
-    if (isInside <= radius) {
-      let propertiesToSet = [];
-      let selected = getNearlyShops();
-      shops.forEach((shop) => {
-        let isInside = getDistance(mapPressedCoordinate, shop.coords);
-
-        if (isInside <= 200) {
-          mapRef.current.animateToRegion(
-            {
-              latitude: shop.coords.latitude,
-              longitude: shop.coords.longitude,
-              latitudeDelta: 0.0422,
-              longitudeDelta: 0.0421,
-            },
-            300,
-          );
-          // aqui
-          let updatedShops = selected.filter((sp) => sp.name !== shop.name);
-
-          updatedShops.unshift(shop);
-          setSwiperState(0);
-          setSelectedShops(updatedShops);
-        }
-      });
-    } else {
-      let shopsToInsert = [];
-      shops.forEach((shop) => {
-        let isInside = getDistance(mapPressedCoordinate, shop.coords);
-
-        if (isInside <= 200) {
-          mapRef.current.animateToRegion(
-            {
-              latitude: shop.coords.latitude,
-              longitude: shop.coords.longitude,
-              latitudeDelta: 0.0422,
-              longitudeDelta: 0.0421,
-            },
-            300,
-          );
-          // aqui
-
-          shopsToInsert.push(shop);
-
-          setSwiperState(0);
-          setSelectedShops(shopsToInsert);
-        }
-      });
-    }
   };
 
   const handlePropertyChange = (currentName) => {
