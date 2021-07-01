@@ -1,0 +1,1 @@
+export const API_DEV = "https://tiendas-a18ea-default-rtdb.firebaseio.com";

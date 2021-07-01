@@ -9,8 +9,30 @@ import ShopCards from '../cards/shopsCards';
 import {Icon, Button} from 'react-native-elements';
 import {Stores} from '../data/dummy-data';
 
+import {getAllStores} from '../api/store';
+
 function MapScreen({route, navigation}) {
   const {product} = route.params;
+
+  const [NewStores, setStores] = useState([]);
+
+  const [Loading, setLoading] = useState(true);
+  
+  const [Error, setError] = useState();
+  
+  useEffect (() => {
+    try {
+        getAllStores()
+        .then((response) => {
+          setStores(response);
+          setLoading(false);
+          console.log(response);
+        });
+      } catch (error) { 
+        console.log(error);
+        setError(error); 
+      };
+  });
 
   //console.log(product.Stores);
   const stores = [];
@@ -21,8 +43,8 @@ function MapScreen({route, navigation}) {
       }
     });
   });
-  console.log('Tiendas: ');
-  console.log(stores);
+  //console.log('Tiendas: ');
+  //console.log(stores);
 
   const [currentLocation, setCurrentLocation] = useState({
     latitude: 37.78825,

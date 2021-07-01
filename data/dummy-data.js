@@ -3,19 +3,6 @@ import SubCategory from '../models/SubCategory';
 import Product from '../models/Product';
 //import Store from '../models/Store';
 import Brand from '../models/Brand';
-import { useEffect, useState } from 'react';
-
-const [Stores, setStores] = useState([]);
-
-useEffect (() => {
-  try {
-    const getStores = async () => {
-      fetch("https://tiendas-a18ea-default-rtdb.firebaseio.com/tiendas.json")
-      .then(response => response.json())
-      .then(data => { setStores(data); });
-    }
-  } catch (response) { console.log("F de Fallo xd") };
-});
 
 export const CATEGORIES = [
   new Category('c1', 'Computadora', 'laptop'),
@@ -80,7 +67,7 @@ export const SUBCATEGORIES = [
    *
    */
 ];
-/*
+
 export const Stores = [
   {
     id: 'str1',
@@ -299,7 +286,7 @@ export const Stores = [
       },
     ],
   },
-];*/
+];
 
 
 export const Details = [
@@ -485,5 +472,3 @@ export const Details = [
     Stores: ['str1'],
   },
 ];
-
-export { Stores };
