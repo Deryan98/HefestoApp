@@ -1,10 +1,33 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {SUBCATEGORIES, PRODUCTS} from '../data/dummy-data';
 import ProductList from '../components/ProductList';
 import {Details} from '../data/dummy-data';
 
+import {getAllProducts} from '../api/products';
+
 const HomeScreen = ({route, navigation}) => {
+
+  const [Products, setProducts] = useState([]);
+
+  const [Loading, setLoading] = useState(true);
+  
+  const [Error, setError] = useState();
+  
+  useEffect (() => {
+    try {
+        getAllProducts()
+        .then((response) => {
+          setProducts(response);
+          setLoading(false);
+          //console.log(response);
+        });
+      } catch (error) { 
+        console.log(error);
+        setError(error); 
+      };
+  });
+
   //obtenemos el id de la subcategoria
   const subCatId = SUBCATEGORIES.find((subcat) => subcat.title === route.name)
     .id;

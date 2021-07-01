@@ -26,7 +26,7 @@ function MapScreen({route, navigation}) {
         .then((response) => {
           setStores(response);
           setLoading(false);
-          console.log(response);
+          //console.log(response);
         });
       } catch (error) { 
         console.log(error);
