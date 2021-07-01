@@ -9,9 +9,7 @@ import {getAllProducts} from '../api/products';
 const HomeScreen = ({route, navigation}) => {
 
   const [Details, setProducts] = useState([]);
-
   const [Loading, setLoading] = useState(true);
-  
   const [Error, setError] = useState();
   
   useEffect (() => {

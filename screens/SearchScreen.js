@@ -1,11 +1,31 @@
-import * as React from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import {HeaderBar} from '../components/HeaderBar';
-import {PRODUCTS, Details} from '../data/dummy-data';
+//import {Details} from '../data/dummy-data';
 import ProductList from '../components/ProductList';
 import Fuse from 'fuse.js';
+import {getAllProducts} from '../api/products';
 
 const SearchScreen = ({navigation, route}) => {
+
+  const [Details, setProducts] = useState([]);
+  const [Loading, setLoading] = useState(true);
+  const [Error, setError] = useState();
+  
+  useEffect (() => {
+    try {
+        getAllProducts()
+        .then((response) => {
+          setProducts(response);
+          setLoading(false);
+          //console.log(response);
+        });
+      } catch (error) { 
+        console.log(error);
+        setError(error); 
+      };
+  });
+
   const [inputSearch, setInputSearch] = React.useState('');
 
   const handleKeyPress = (value) => {
@@ -13,7 +33,7 @@ const SearchScreen = ({navigation, route}) => {
     setInputSearch(value);
   };
 
-  const fuse = new Fuse(Details, {
+  const fuse = new Fuse(Object.values(Details), {
     keys: ['marca', 'modelo', 'price'],
     includeScore: true,
   });
