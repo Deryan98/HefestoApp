@@ -158,6 +158,36 @@ export const Stores = [
         image:
           'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',        
       },
+      {
+        id: 'p1',
+        marca: 'Lenovo',
+        modelo: 'IdeaPad 3',
+        sistema_operativo: 'Windows 10',
+        memoria: '256GB SSD',
+        price: '$450',
+        caracteristicas: [' 8GB RAM -', ' Intel Pentium 7 -', ' 17 pulgadas '],
+        subCategory: 'sc1',
+        image:
+          'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
+        Stores: ['str1', 'str2'],
+      },
+      {
+        id: 'p2',
+        marca: 'Mini PC Asrock',
+        modelo: '90BXG3701',
+        sistema_operativo: 'Windows 10',
+        memoria: 'Espacio para dos discos duros/HDD de 2,5',
+        price: '$170.00',
+        caracteristicas: [
+          ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
+          ' AA20BAOW intel -',
+          ' -',
+        ],
+        subCategory: 'sc1',
+        image:
+          'https://aeon.com.sv/web/image/product.product/6309/image_1024/%5B6763%5D%20Mini%20PC%20Asrock%20%2090BXG3701-A20BAOW%20intel?unique=5cc788f',
+        Stores: ['str1', 'str2'],
+      },
     ],
     isSelected: false,
   },
@@ -207,14 +237,80 @@ export const Stores = [
       },
     ],
     isSelected: false,
+    Products: [
+      {
+        id: 'p1',
+        marca: 'Lenovo',
+        modelo: 'IdeaPad 3',
+        sistema_operativo: 'Windows 10',
+        memoria: '256GB SSD',
+        price: '$450',
+        caracteristicas: [' 8GB RAM -', ' Intel Pentium 7 -', ' 17 pulgadas '],
+        subCategory: 'sc1',
+        image:
+          'https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',
+        Stores: ['str1', 'str2'],
+      },
+      {
+        id: 'p2',
+        marca: 'Mini PC Asrock',
+        modelo: '90BXG3701',
+        sistema_operativo: 'Windows 10',
+        memoria: 'Espacio para dos discos duros/HDD de 2,5',
+        price: '$170.00',
+        caracteristicas: [
+          ' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',
+          ' AA20BAOW intel -',
+          ' -',
+        ],
+        subCategory: 'sc1',
+        image:
+          'https://aeon.com.sv/web/image/product.product/6309/image_1024/%5B6763%5D%20Mini%20PC%20Asrock%20%2090BXG3701-A20BAOW%20intel?unique=5cc788f',
+        Stores: ['str1', 'str2'],
+      },
+      {
+        id: 'p7',
+        marca: 'CPU Panzer',
+        modelo: 'PRO 3700X',
+        sistema_operativo: 'Windows 10',
+        memoria: 'SSD 240GB',
+        price: '$1,550.00',
+        caracteristicas: [
+          ' 16GB Ram -',
+          ' AMD Ryzen™ 7 3700X 3.6Ghz up to 4.2Ghz AM4 -',
+          '',
+        ],
+        subCategory: 'sc4',
+        image:
+          'https://scontent.fsal1-1.fna.fbcdn.net/v/t1.0-9/121537082_3324789797570024_5551759657868526251_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=-0IBZzPn8zkAX92diQB&_nc_ht=scontent.fsal1-1.fna&oh=996b39a38967891120b76fa4afcaa1f9&oe=5FEE504B',
+        Stores: ['str2', 'str3', 'str4'],
+      },
+    
+      {
+        id: 'p8',
+        marca: 'DELL',
+        modelo: 'LATITUDE 5490',
+        sistema_operativo: 'Windows 10 PRO',
+        memoria: 'SSD 256GB',
+        price: '$1,599.00',
+        caracteristicas: [
+          ' RAM 8GB -',
+          ' INTEL CORE I7 8650U -',
+          ' PANTALLA LED HD 14',
+        ],
+        subCategory: 'sc4',
+        image:
+          'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+        Stores: ['str2', 'str3', 'str4'],
+      },
+    ]
   },
   {
     id: 'str3',
     name: 'XHT',
     description:
       'Xtreme Hardware Technology , Productos Garantizados Al Mejor Precio y Con La Mejor Calidad. Escribenos , Recuerda Si no lo tenemos ¡lo conseguimos!',
-    logo:
-      'https://scontent.fsal5-1.fna.fbcdn.net/v/t1.0-9/43524475_1146098055541118_6706809367934533632_o.png?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=X23_W_gqXCEAX9tfqb1&_nc_ht=scontent.fsal5-1.fna&oh=3ea892b194b4c5faca49539667f07512&oe=5FEB2F2A',
+    logo: 'https://xht.com.sv/wp-content/uploads/2020/06/xht-icon.png',
     correo: 'xht@gmail.com',
     telefono: '25275703',
     coords: {
@@ -253,14 +349,81 @@ export const Stores = [
         ],
       },
     ],
+    Products:[
+      {
+        id: 'p5',
+        marca: 'HP',
+        modelo: 'PROBOOK 440 G7',
+        sistema_operativo: 'Windows 10 Pro 64-bit',
+        memoria: 'SATA de 2.5″ de 1 TB',
+        price: '$332.00',
+        caracteristicas: [
+          ' 4 GB DDR4 SDRAM -',
+          ' Intel® Core™ i7-10510U (4.90 GHz) -',
+          'LCD delgada de 15.6″ (1366 x 768)',
+        ],
+        subCategory: 'sc3',
+        image: 'https://kpchardware.com/img/p/1/0/0/7/8/10078-home_default.jpg',
+        Stores: ['str3', 'str4'],
+      },
+    
+      {
+        id: 'p6',
+        marca: 'HP',
+        modelo: 'OMEN 15-dc1002la',
+        sistema_operativo: 'Windows 10',
+        memoria: '512GB SSD',
+        price: '$1540',
+        caracteristicas: [' 8GB RAM -', ' Intel Core i5 -', ' 15,6" -'],
+        subCategory: 'sc3',
+        image:
+          'https://www.kayfastore.com/assets/images/galleries/1591026754142230.jpg',
+        Stores: ['str3', 'str4'],
+      },
+    
+      {
+        id: 'p7',
+        marca: 'CPU Panzer',
+        modelo: 'PRO 3700X',
+        sistema_operativo: 'Windows 10',
+        memoria: 'SSD 240GB',
+        price: '$1,550.00',
+        caracteristicas: [
+          ' 16GB Ram -',
+          ' AMD Ryzen™ 7 3700X 3.6Ghz up to 4.2Ghz AM4 -',
+          '',
+        ],
+        subCategory: 'sc4',
+        image:
+          'https://scontent.fsal1-1.fna.fbcdn.net/v/t1.0-9/121537082_3324789797570024_5551759657868526251_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=-0IBZzPn8zkAX92diQB&_nc_ht=scontent.fsal1-1.fna&oh=996b39a38967891120b76fa4afcaa1f9&oe=5FEE504B',
+        Stores: ['str2', 'str3', 'str4'],
+      },
+    
+      {
+        id: 'p8',
+        marca: 'DELL',
+        modelo: 'LATITUDE 5490',
+        sistema_operativo: 'Windows 10 PRO',
+        memoria: 'SSD 256GB',
+        price: '$1,599.00',
+        caracteristicas: [
+          ' RAM 8GB -',
+          ' INTEL CORE I7 8650U -',
+          ' PANTALLA LED HD 14',
+        ],
+        subCategory: 'sc4',
+        image:
+          'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+        Stores: ['str2', 'str3', 'str4'],
+      },
+    ],
   },
   {
     id: 'str4',
     name: 'Kaifa Store',
     description:
       'Somos una empresa 100% Salvadoreña  dedicada a brindarle lo más novedoso en Computadoras de Alto Rendimiento y sus componentes principales. Con productos de las mejores marcas internacionales en línea de Cases, Procesadores, Disipadores, Moherboards, Tarjetas de Video, Memoria Ram, Discos Duros, SSD, Enfriamiento líquido Laptops y Periféricos como Impresores, Proyectores Teclados, Mouse Básicos y Gaming entre otros.',
-    logo:
-      'https://scontent.fsal5-1.fna.fbcdn.net/v/t31.0-8/25488441_1517593111695710_8058745423180531550_o.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=XbgLHLaErogAX_dnMJ0&_nc_oc=AQliebC5kfqP0EHzwLqcT4tqv5XmIGC531vYjhC0w4okMfCP844I4ogeOHBXThOSdOg&_nc_ht=scontent.fsal5-1.fna&oh=da0df58bdc5fc5064c0f4e81f4c7cf26&oe=5FED6AF5',
+    logo: 'https://i.pinimg.com/236x/a8/ac/f3/a8acf3b4b9ddf0c4f6aee9bcb1e60e2c.jpg',
     correo: 'kayfa.info49@gmail.com',
     telefono: '22604027',
     coords: {
@@ -327,6 +490,130 @@ export const Stores = [
             id: 'p10',
           },
         ],
+      },
+    ],
+    Products:[
+      {
+        id: 'p5',
+        marca: 'HP',
+        modelo: 'PROBOOK 440 G7',
+        sistema_operativo: 'Windows 10 Pro 64-bit',
+        memoria: 'SATA de 2.5″ de 1 TB',
+        price: '$332.00',
+        caracteristicas: [
+          ' 4 GB DDR4 SDRAM -',
+          ' Intel® Core™ i7-10510U (4.90 GHz) -',
+          'LCD delgada de 15.6″ (1366 x 768)',
+        ],
+        subCategory: 'sc3',
+        image: 'https://kpchardware.com/img/p/1/0/0/7/8/10078-home_default.jpg',
+        Stores: ['str3', 'str4'],
+      },
+    
+      {
+        id: 'p6',
+        marca: 'HP',
+        modelo: 'OMEN 15-dc1002la',
+        sistema_operativo: 'Windows 10',
+        memoria: '512GB SSD',
+        price: '$1540',
+        caracteristicas: [' 8GB RAM -', ' Intel Core i5 -', ' 15,6" -'],
+        subCategory: 'sc3',
+        image:
+          'https://www.kayfastore.com/assets/images/galleries/1591026754142230.jpg',
+        Stores: ['str3', 'str4'],
+      },
+    
+      {
+        id: 'p7',
+        marca: 'CPU Panzer',
+        modelo: 'PRO 3700X',
+        sistema_operativo: 'Windows 10',
+        memoria: 'SSD 240GB',
+        price: '$1,550.00',
+        caracteristicas: [
+          ' 16GB Ram -',
+          ' AMD Ryzen™ 7 3700X 3.6Ghz up to 4.2Ghz AM4 -',
+          '',
+        ],
+        subCategory: 'sc4',
+        image:
+          'https://scontent.fsal1-1.fna.fbcdn.net/v/t1.0-9/121537082_3324789797570024_5551759657868526251_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=-0IBZzPn8zkAX92diQB&_nc_ht=scontent.fsal1-1.fna&oh=996b39a38967891120b76fa4afcaa1f9&oe=5FEE504B',
+        Stores: ['str2', 'str3', 'str4'],
+      },
+    
+      {
+        id: 'p8',
+        marca: 'DELL',
+        modelo: 'LATITUDE 5490',
+        sistema_operativo: 'Windows 10 PRO',
+        memoria: 'SSD 256GB',
+        price: '$1,599.00',
+        caracteristicas: [
+          ' RAM 8GB -',
+          ' INTEL CORE I7 8650U -',
+          ' PANTALLA LED HD 14',
+        ],
+        subCategory: 'sc4',
+        image:
+          'https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg',
+        Stores: ['str2', 'str3', 'str4'],
+      },
+    
+      {
+        id: 'p9',
+        marca: 'MeshTown',
+        modelo: 'CPU Gaming',
+        sistema_operativo: 'Windows 10 PRO',
+        memoria: 'SSD 240GB',
+        price: '$1,599.00',
+        caracteristicas: [' 16GB RAM -', ' Ryzen 3 3100 -', ''],
+        subCategory: 'sc5',
+        image:
+          'https://aeon.com.sv/web/image/product.product/6803/image_1024/CPU%20Gaming%20MeshTown%2C%20Ryzen%203%203100%2C%2016GB%20RAM%2C%20SSD%20240GB%2C%20RX580%208GB%2C%20600W%2080+%20RGB%20%28Ryzen%203100%29?unique=2c012b4',
+        Stores: ['str1', 'str4'],
+      },
+    
+      {
+        id: 'p10',
+        marca: 'Acer',
+        modelo: 'Nitro 5',
+        sistema_operativo: 'Windows 10 Home',
+        memoria: 'SSD 256GB',
+        price: '$599.99',
+        caracteristicas: [' 8GB RAM -', ' Intel Core i5-9300H -', '15.6 Pulgadas'],
+        subCategory: 'sc5',
+        image:
+          'https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg',
+        Stores: ['str1', 'str4'],
+      },
+    
+      {
+        id: 'p11',
+        marca: 'Computadora Completa',
+        modelo: 'GT710',
+        sistema_operativo: 'Windows 10 Home',
+        memoria: 'SSD 240GB',
+        price: '$650.00',
+        caracteristicas: [' 8GB RAM -', ' Intel Core i5 -', 'Monitor Samsung 22”'],
+        subCategory: 'sc6',
+        image:
+          'https://xht.com.sv/wp-content/uploads/2020/08/photo_2020-08-19_22-06-55.jpg',
+        Stores: ['str1'],
+      },
+    
+      {
+        id: 'p12',
+        marca: 'Computadora AMD Ryzen 3',
+        modelo: '3200G',
+        sistema_operativo: 'Windows 10 Home',
+        memoria: 'SSD 240GB',
+        price: '$650.00',
+        caracteristicas: [' 8GB RAM -', ' AMD Ryzen 3 3200G -', ''],
+        subCategory: 'sc6',
+        image:
+          'https://xht.com.sv/wp-content/uploads/2020/09/Computadora-AMD-Ryzen-3-3200G-8GB.jpg',
+        Stores: ['str1'],
       },
     ],
   },
