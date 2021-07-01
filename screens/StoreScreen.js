@@ -6,7 +6,7 @@ import ProductList from '../components/ProductList';
 
 const StoreScreen = ({route, navigation}) => {
   //obtenemos el id de la subcategoria
-  const stores = Stores.find();
+  const stores = Stores;
   return (
     <ProductList
       route={route}
