@@ -68,8 +68,8 @@ function MapScreen({route, navigation}) {
   console.log(stores);
 
   const [currentLocation, setCurrentLocation] = useState({
-    latitude: 37.78825,
-    longitude: -122.4324,
+    latitude: 13.7000419,
+    longitude: -89.219667,
 
     latitudeDelta: 0.0922,
     longitudeDelta: 0.0421,

@@ -4,21 +4,26 @@ import {Stores} from '../data/dummy-data.js';
 import StoreCard from './StoreCard';
 
 const StoresList = (props) => {
-  const renderProductCard = (itemData) => {
+  const renderStoreCard = (itemData) => {
     if (itemData.item.logo != '') {
       return (
         <StoreCard
           name={itemData.item.name}
           logo={itemData.item.logo}
-          onSelectStore={() => {
+          onSelectProduct={() => {
             if (
-                props.route.name == 'SearchStoreScreen'
-              ) {
-                  props.navigation.navigate('StoreDetail', {
-                  store: itemData.item,
-                  routename: props.route,
-                });
-  
+              props.route.name == 'ProductsStoreScreen' ||
+              props.route.name == 'WishList'
+            ) {
+              props.navigation.navigate('ProductDetail', {
+                product: itemData.item,
+                routename: props.route,
+              });
+            } else {
+              props.navigation.navigate('StoreBottomTabs', {
+                store: itemData.item,
+                routename: props.route,
+              });
             }
           }}
         />
@@ -31,7 +36,7 @@ const StoresList = (props) => {
       <FlatList
         data={props.listData}
         keyExtractor={(item, index) => item.id}
-        renderItem={renderProductCard}
+        renderItem={renderStoreCard}
         style={{width: '100%'}}
       />
     </View>

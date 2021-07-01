@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import StoreListScreen from '../../screens/StoreScreen';
+import {StoreBottomTabs} from './children/StoreBottomTabs';
 import DrawerMenu from '../../components/DrawerMenu';
 import SearchStoreScreen from '../../screens/SearchStoreScreen';
 import ResultStoreScreen from '../../screens/ResultStoreScreen';
@@ -62,6 +63,11 @@ export const StoreListNavigator = ({navigation}) => {
             />
           ),
         }}
+      />
+      <StoreListStack.Screen
+        name="StoreBottomTabs"
+        component={StoreBottomTabs}
+        options={{headerShown: false}}
       />
       <StoreListStack.Screen
         name="SearchStoreScreen"

@@ -91,10 +91,28 @@ export const Stores = [
         color: 'red',
         Products: [
           {
-            id: 'p3',
+            id: 'p10',
+            marca: 'Acer',
+            modelo: 'Nitro 5',
+            sistema_operativo: 'Windows 10 Home',
+            memoria: 'SSD 256GB',
+            price: '$599.99',
+            caracteristicas: [' 8GB RAM -', ' Intel Core i5-9300H -', '15.6 Pulgadas'],
+            subCategory: 'sc5',
+            image:
+              'https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg',
           },
           {
             id: 'p4',
+            marca: 'Mini PC Asrock',
+            modelo: 'G4930',
+            sistema_operativo: 'Windows 10',
+            memoria: 'SSD 240GB',
+            price: '$332.00',
+            caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
+            subCategory: 'sc2',
+            image:
+              'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',        
           },
         ],
       },
@@ -113,6 +131,32 @@ export const Stores = [
             id: 'p2',
           },
         ],
+      },
+    ],
+    Products: [
+      {
+        id: 'p10',
+        marca: 'Acer',
+        modelo: 'Nitro 5',
+        sistema_operativo: 'Windows 10 Home',
+        memoria: 'SSD 256GB',
+        price: '$599.99',
+        caracteristicas: [' 8GB RAM -', ' Intel Core i5-9300H -', '15.6 Pulgadas'],
+        subCategory: 'sc5',
+        image:
+          'https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg',
+      },
+      {
+        id: 'p4',
+        marca: 'Mini PC Asrock',
+        modelo: 'G4930',
+        sistema_operativo: 'Windows 10',
+        memoria: 'SSD 240GB',
+        price: '$332.00',
+        caracteristicas: [' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -'],
+        subCategory: 'sc2',
+        image:
+          'https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf',        
       },
     ],
     isSelected: false,
