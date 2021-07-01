@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import MapScreen from '../../../screens/MapScreen';
+import MapStoreScreen from '../../../screens/MapStoreScreen';
 import StoreDetailScreen from '../../../screens/StoreDetailScreen';
 import {Icon} from 'react-native-elements';
 
@@ -31,8 +31,8 @@ export const StoreBottomTabs = ({route}) => {
         }}
       />
       <StoreBottomTab.Screen
-        name="StoreMap"
-        component={MapScreen}
+        name="StoreLocalitationMap"
+        component={MapStoreScreen}
         initialParams={{...route.params}}
         options={{
           tabBarLabel: 'Ubicacion',
