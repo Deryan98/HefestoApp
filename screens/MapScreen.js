@@ -32,12 +32,14 @@ function MapScreen({route, navigation}) {
       };
   });
 
-  console.log(product.Stores);
+  //console.log(product.Stores);
   const stores = [];
-  Object.keys(Stores).map((store) => {
+  
+  Object.keys(Stores).map((storeVar) => {
     Object.keys(product.Stores).map((id) => {
-      if (store.id == id) {
-        stores.push(store);
+      console.log(storeVar.id);
+      if (storeVar.id == id) {
+        stores.push(storeVar);
       }
     });
   });
