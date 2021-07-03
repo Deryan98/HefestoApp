@@ -35,11 +35,10 @@ function MapScreen({route, navigation}) {
   //console.log(product.Stores);
   const stores = [];
   
-  Object.keys(Stores).map((storeVar) => {
-    Object.keys(product.Stores).map((id) => {
-      console.log(storeVar.id);
-      if (storeVar.id == id) {
-        stores.push(storeVar);
+  Object.values(Stores).map((store) => {
+    Object.values(product.Stores).map((id) => {
+      if (store.id == id) {
+        stores.push(store);
       }
     });
   });
@@ -153,7 +152,7 @@ function MapScreen({route, navigation}) {
         options,
       );
     } catch (error) {
-      console.log('dio error we', error);
+      console.log('Error', error);
     }
   };
 
