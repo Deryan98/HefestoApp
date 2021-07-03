@@ -36,6 +36,7 @@ function MapScreen({route, navigation}) {
   const stores = [];
   
   Object.values(Stores).map((store) => {
+    //console.log(Object.keys(product.Stores));
     Object.values(product.Stores).map((id) => {
       if (store.id == id) {
         stores.push(store);
