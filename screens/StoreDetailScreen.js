@@ -37,7 +37,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     justifyContent: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#14213d',
     padding: 24,
   },
   description: {
@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   productName: {
-    color: '#DFFF00',
+    color: 'white',
     fontSize: 25,
     margin: 10,
     flexDirection: 'row',
@@ -65,7 +65,6 @@ const styles = StyleSheet.create({
   },
   productPrice: {
     fontSize: 20,
-    fontStyle: 'italic',
     fontWeight: 'bold',
     color: 'white',
     left: 115,

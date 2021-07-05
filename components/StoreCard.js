@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'open-sans-bold',
         fontSize: 20,
-        color: 'yellow',
+        color: 'white',
         textAlign: 'center'
     }
 });

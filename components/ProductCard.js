@@ -36,7 +36,7 @@ const Card = props => {
                         <Image source={{uri: props.image}} style={styles.testImage} />
                     </View>
                     <View style={styles.productInfo}>
-                        <Text style={styles.title}>{props.title}</Text>
+                        <Text style={[styles.title,{fontWeight:'bold',color:'white'}]}>{props.title}</Text>
                         <Text style={styles.title}>{props.price}</Text>
                     </View>
                 </View>
@@ -48,11 +48,10 @@ const Card = props => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 10
     },
     productItem: {
         width: '100%',
-        backgroundColor: '#f5f5f5',
+        backgroundColor: 'white',
         borderRadius: 10,
         overflow: 'hidden',
         marginVertical: 10
@@ -65,13 +64,17 @@ const styles = StyleSheet.create({
     title: {
         fontFamily: 'Monospace',
         fontSize: 20,
+        color: '#9fffcb'
     },
     testImage: {
         width: 150,
         height: 150,
     },
     productInfo: {
-        paddingTop: 5
+        paddingTop: 5,
+        backgroundColor: '#3a7ca5',
+        paddingLeft: 10,
+        paddingBottom: 5
     },
     imageContainer: {
         flex: 1,

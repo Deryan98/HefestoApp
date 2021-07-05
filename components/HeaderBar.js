@@ -4,7 +4,7 @@ import {Header, Input, Icon} from 'react-native-elements';
 export const HeaderBar = (props) => {
   return (
     <Header
-      backgroundColor="black"
+      backgroundColor="#14213d"
       containerStyle={{
         marginTop: 5,
       }}
@@ -12,7 +12,7 @@ export const HeaderBar = (props) => {
         <Icon
           name="arrow-left"
           type="material-community"
-          color="chartreuse"
+          color="white"
           // iconStyle={{
           //   borderRadius: 30,
           //   backgroundColor: 'chartreuse',
@@ -23,8 +23,8 @@ export const HeaderBar = (props) => {
       centerComponent={
         <Input
           placeholder="Buscar"
-          placeholderTextColor="yellowgreen"
-          selectionColor="yellowgreen"
+          placeholderTextColor="white"
+          selectionColor="white"
           autoFocus={true}
           //defaultValue={props.inputSearch}
           //onChangeText={(text) => setInputSearch(text)}
@@ -35,16 +35,16 @@ export const HeaderBar = (props) => {
               name="search"
               type="material"
               size={30}
-              color="green"
+              color="orange"
               iconStyle={{
                 borderRadius: 30,
-                backgroundColor: 'chartreuse',
+                backgroundColor: 'white',
               }}
               //onPress={() => searchingHandler(navigation)}
             />
           }
           inputStyle={{
-            color: 'chartreuse',
+            color: 'white',
             width: '100%',
           }}
         />

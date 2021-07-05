@@ -33,7 +33,7 @@ export const StoreListNavigator = ({navigation}) => {
           title: 'Hefesto App',
           headerStyle: {
             //color de la app bar
-            backgroundColor: 'black',
+            backgroundColor: '#14213d',
           },
           //Color del titulo del header
           headerTintColor: 'white',
@@ -79,11 +79,11 @@ export const StoreListNavigator = ({navigation}) => {
         component={ResultStoreScreen}
         initialParams={{SearchText: inputSearch}}
         options={{
-          headerTintColor: 'chartreuse',
+          headerTintColor: '#14213d',
           title: (
             <Input
               placeholder="Buscar                                       "
-              placeholderTextColor="yellowgreen"
+              placeholderTextColor="white"
               //evita que se levante el teclado cuando hago onFocus
               showSoftInputOnFocus={false}
               defaultValue={inputSearch}
@@ -93,8 +93,8 @@ export const StoreListNavigator = ({navigation}) => {
                   name="search"
                   type="material"
                   size={30}
-                  color="green"
-                  backgroundColor="chartreuse"
+                  color="white"
+                  backgroundColor="#14213d"
                   iconStyle={{
                     borderRadius: 15,
                     width: '100%',
@@ -102,7 +102,7 @@ export const StoreListNavigator = ({navigation}) => {
                 />
               }
               inputStyle={{
-                color: 'chartreuse',
+                color: 'white',
                 alignContent: 'center',
               }}
               inputContainerStyle={{
@@ -113,13 +113,13 @@ export const StoreListNavigator = ({navigation}) => {
             />
           ),
           headerStyle: {
-            backgroundColor: 'black',
+            backgroundColor: '#14213d',
           },
           headerTitleStyle: {
             fontWeight: 'normal',
             height: '80%',
             width: '100%',
-            backgroundColor: 'green',
+            backgroundColor: 'white',
             borderRadius: 30,
             margin: 5,
             marginLeft: -15,

@@ -16,11 +16,11 @@ export const ResultsNavigator = ({navigation}) => {
         name="ResultsScreen"
         component={ResultsScreen}
         options={{
-          headerTintColor: 'chartreuse',
+          headerTintColor: 'white',
           title: (
             <Input
               placeholder="Buscar                                       "
-              placeholderTextColor="yellowgreen"
+              placeholderTextColor="white"
               //evita que se levante el teclado cuando hago onFocus
               showSoftInputOnFocus={false}
               onFocus={() => searchAgain(navigation)}
@@ -29,8 +29,8 @@ export const ResultsNavigator = ({navigation}) => {
                   name="search"
                   type="material"
                   size={30}
-                  color="green"
-                  backgroundColor="chartreuse"
+                  color="orange"
+                  backgroundColor="white"
                   iconStyle={{
                     borderRadius: 15,
                     width: '100%',
@@ -38,7 +38,7 @@ export const ResultsNavigator = ({navigation}) => {
                 />
               }
               inputStyle={{
-                color: 'chartreuse',
+                color: 'white',
                 alignContent: 'center',
               }}
               inputContainerStyle={{
@@ -51,7 +51,7 @@ export const ResultsNavigator = ({navigation}) => {
           ),
           headerStyle: {
             //color de la app bar
-            backgroundColor: 'black',
+            backgroundColor: '#14213d',
           },
           //Color del titulo del header
           //headerTintColor: 'chartreuse',
@@ -61,7 +61,7 @@ export const ResultsNavigator = ({navigation}) => {
             //color: 'chartreuse',
             height: '80%',
             width: '100%',
-            backgroundColor: 'green',
+            backgroundColor: 'white',
             borderRadius: 30,
             margin: 5,
             marginLeft: -15,

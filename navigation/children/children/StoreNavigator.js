@@ -16,11 +16,11 @@ export const StoreNavigator = ({route, navigation}) => {
         component={CategoriesScreen}
         initialParams={{...route.params}}
         options={{
-          headerTintColor: 'chartreuse',
+          headerTintColor: 'white',
           title: Store.name,
           headerStyle: {
             //color de la app bar
-            backgroundColor: 'black',
+            backgroundColor: '#14213d',
           },
         }}
       />
@@ -29,11 +29,11 @@ export const StoreNavigator = ({route, navigation}) => {
         name="ProductsStoreScreen"
         component={CategoryMealsScreen}
         options={{
-          headerTintColor: 'chartreuse',
+          headerTintColor: 'white',
           title: 'Productos',
           headerStyle: {
             //color de la app bar
-            backgroundColor: 'black',
+            backgroundColor: '#14213d',
           },
         }}
       />

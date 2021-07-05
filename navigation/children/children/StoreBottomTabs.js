@@ -9,10 +9,10 @@ export const StoreBottomTabs = ({route}) => {
   return (
     <StoreBottomTab.Navigator
       tabBarOptions={{
-        activeBackgroundColor: 'black',
-        activeTintColor: 'chartreuse',
-        inactiveBackgroundColor: 'black',
-        inactiveTintColor: 'green',
+        activeBackgroundColor: '#14213d',
+        activeTintColor: 'orange',
+        inactiveBackgroundColor: '#14213d',
+        inactiveTintColor: 'white',
       }}>
       <StoreBottomTab.Screen
         name="StoreDetail"
