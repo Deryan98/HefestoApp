@@ -7,7 +7,7 @@ export const HeaderDetail = (props) => {
 
   return (
     <Header
-      backgroundColor="black"
+      backgroundColor="#14213d"
       containerStyle={{
         marginTop: 5,
       }}
@@ -15,7 +15,7 @@ export const HeaderDetail = (props) => {
         <Icon
           name="arrow-left"
           type="material-community"
-          color="chartreuse"
+          color="white"
           // iconStyle={{
           //   borderRadius: 30,
           //   backgroundColor: 'chartreuse',
@@ -27,7 +27,7 @@ export const HeaderDetail = (props) => {
         <Text
           style={{
             width: '100%',
-            color: 'chartreuse',
+            color: 'white',
             fontSize: 20,
             fontWeight: 'bold',
             flexDirection: 'row',
@@ -41,7 +41,7 @@ export const HeaderDetail = (props) => {
           name="star-outline"
           size={30}
           type="material-community"
-          color="chartreuse"
+          color="white"
           onPress={() => props.handleStar()}
         />
       }

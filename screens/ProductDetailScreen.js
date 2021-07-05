@@ -32,7 +32,7 @@ function ProductDetailScreen({ route, navigation }) {
         handleStar={toggleWishHandler}
       />
       <View style={styles.container}>
-        <ScrollView style={{ flex: 1 }} contentContainerStyle={{ flexGrow: 1 }}>
+        <ScrollView style={[{ flex: 1 },{paddingBottom: 10}]} contentContainerStyle={{ flexGrow: 1 }}>
           <Image
             source={{ uri: route.params?.product.image }}
             style={styles.photo}
@@ -71,13 +71,11 @@ const styles = StyleSheet.create({
     width: '100%',
     height: '100%',
     justifyContent: 'center',
-    backgroundColor: 'black',
+    backgroundColor: '#14213d',
     padding: 24,
   },
   description: {
     fontSize: 15,
-    fontStyle: 'italic',
-    fontWeight: 'bold',
     color: 'white',
     lineHeight: 35,
   },
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
   },
   productName: {
-    color: '#DFFF00',
+    color: '#FCA311',
     fontSize: 25,
     margin: 10,
     flexDirection: 'row',
@@ -96,10 +94,10 @@ const styles = StyleSheet.create({
     fontFamily: 'georgia',
     fontWeight: 'bold',
     marginBottom: 15,
+    textAlign: 'center'
   },
   productPrice: {
     fontSize: 20,
-    fontStyle: 'italic',
     fontWeight: 'bold',
     color: 'white',
     left: 115,
