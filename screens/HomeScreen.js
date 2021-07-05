@@ -8,7 +8,7 @@ import {getAllProducts} from '../api/products';
 
 const HomeScreen = ({route, navigation}) => {
 
-  const [Details, setProducts] = useState([]);
+  const [Products, setProducts] = useState([]);
   const [Loading, setLoading] = useState(true);
   const [Error, setError] = useState();
   
@@ -16,7 +16,10 @@ const HomeScreen = ({route, navigation}) => {
     try {
         getAllProducts()
         .then((response) => {
-          setProducts(response);
+          let Data = Object.entries(response).map(([id, entry]) => {
+            return { ...entry, id }
+          });
+          setProducts(Data);
           setLoading(false);
           //console.log(response);
         });
@@ -27,10 +30,10 @@ const HomeScreen = ({route, navigation}) => {
   });
 
   //obtenemos el id de la subcategoria
-  const subCatId = SUBCATEGORIES.find((subcat) => subcat.title === route.name)
-    .id;
+  const subCatId = SUBCATEGORIES.find((subcat) => subcat.title === route.name).id;
   //filtra los productos x categoria
-  const displayedProducts = Object.values(Details).filter(
+  //const displayedProducts = Object.values(Details).filter(
+  const displayedProducts = Products.filter(
     (product) => product.subCategory === subCatId,
   );
   //console.log(displayedProducts);

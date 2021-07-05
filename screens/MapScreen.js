@@ -1,48 +1,62 @@
-import React, {useEffect, useState, useRef} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
-import MapView, {PROVIDER_GOOGLE, Marker, Circle} from 'react-native-maps';
+import React, { useEffect, useState, useRef } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import MapView, { PROVIDER_GOOGLE, Marker, Circle } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import Slider from '@react-native-community/slider';
-import {getDistance} from 'geolib';
+import { getDistance } from 'geolib';
 import Modal from 'react-native-modal';
 import ShopCards from '../cards/shopsCards';
-import {Icon, Button} from 'react-native-elements';
+import { Icon, Button } from 'react-native-elements';
 //import {Stores} from '../data/dummy-data';
 
-import {getAllStores} from '../api/store';
+import { getAllStores } from '../api/store';
 
-function MapScreen({route, navigation}) {
-  const {product} = route.params;
+function MapScreen({ route, navigation }) {
 
+  const { product } = route.params;
   const [Stores, setStores] = useState([]);
   const [Loading, setLoading] = useState(true);
   const [Error, setError] = useState();
-  
-  useEffect (() => {
+
+  useEffect(() => {
     try {
-        getAllStores()
+      getAllStores()
         .then((response) => {
-          setStores(response);
+          let Data = Object.entries(response).map(([id, entry]) => {
+            return { ...entry, id }
+          })
+          setStores(Data);
           setLoading(false);
-          //console.log(response);
+
         });
-      } catch (error) { 
-        console.log(error);
-        setError(error); 
-      };
+    } catch (error) {
+      console.log(error);
+      setError(error);
+    };
   });
 
-  //console.log(product.Stores);
   const stores = [];
-  
-  Object.values(Stores).map((store) => {
-    //console.log(Object.keys(product.Stores));
+
+  Stores.map((store) => {
+    //console.log(product.Stores);
     Object.values(product.Stores).map((id) => {
+      //console.log('Tienda id: ' + store.id + 'Tienda producto id: ' + id);
       if (store.id == id) {
         stores.push(store);
       }
     });
   });
+  //console.log(stores);
+  /*
+  Object.values(Stores).map((store) => {
+    //console.log(Object.keys(product.Stores));
+    
+    Object.values(product.Stores).map((id) => {
+      if (store.id == id) {
+        stores.push(store);
+      }
+    });
+  });*/
   //console.log('Tiendas: ');
   //console.log(stores);
 
@@ -101,7 +115,7 @@ function MapScreen({route, navigation}) {
 
     shops.forEach((store) => {
       let distance = getDistance(store.coords, userCoordsLatLon);
-
+      console.log(store.coords);
       if (distance <= radius) {
         nearShops.push({
           ...store,
@@ -137,7 +151,7 @@ function MapScreen({route, navigation}) {
     );
   };
 
-  const handleFailedRequest = (response) => {};
+  const handleFailedRequest = (response) => { };
 
   const getCurrentLocation = async () => {
     try {
@@ -165,7 +179,7 @@ function MapScreen({route, navigation}) {
     return shops.map((store, index) => {
       return (
         <Circle
-          style={{zIndex: 10}}
+          style={{ zIndex: 10 }}
           center={store.coords}
           radius={200}
           fillColor={
@@ -196,7 +210,7 @@ function MapScreen({route, navigation}) {
     }
   };
 
-  const handleMapPress = ({nativeEvent}) => {
+  const handleMapPress = ({ nativeEvent }) => {
     const mapPressedCoordinate = nativeEvent.coordinate;
 
     let userCoordsLatLon = {
@@ -224,7 +238,7 @@ function MapScreen({route, navigation}) {
           );
           // aqui
           let updatedShops = selected.filter((sp) => sp.name !== shop.name);
-
+            //console.log("sp.name", sp.name, "shop.name", shop.name);
           updatedShops.unshift(shop);
           setSwiperState(0);
           setSelectedShops(updatedShops);
@@ -234,7 +248,7 @@ function MapScreen({route, navigation}) {
       let shopsToInsert = [];
       shops.forEach((shop) => {
         let isInside = getDistance(mapPressedCoordinate, shop.coords);
-
+        //console.log("latitude: ", shop.coords.latitude, "longitude: ", shop.coords.longitude);
         if (isInside <= 200) {
           mapRef.current.animateToRegion(
             {
@@ -259,9 +273,9 @@ function MapScreen({route, navigation}) {
   const handlePropertyChange = (currentName) => {
     const updatedShops = shops.map((shop, index) => {
       if (shop.name === currentName) {
-        return {...shop, isSelected: true};
+        return { ...shop, isSelected: true };
       }
-      return {...shop, isSelected: false};
+      return { ...shop, isSelected: false };
     });
     console.log('este es el valor', updatedShops);
 
@@ -298,7 +312,7 @@ function MapScreen({route, navigation}) {
   };
 
   return (
-    <View style={{flex: 1}}>
+    <View style={{ flex: 1 }}>
       <MapView
         ref={mapRef}
         showsUserLocation
@@ -306,13 +320,13 @@ function MapScreen({route, navigation}) {
         initialRegion={currentLocation}
         provider={PROVIDER_GOOGLE}
         onRegionChangeComplete={handleRegionChange}
-        style={{flex: 1}}>
+        style={{ flex: 1 }}>
         {renderPerimeter()}
         {renderMarkers()}
       </MapView>
       <TouchableOpacity
         onPress={() => handleOpenModal()}
-        style={{position: 'absolute', top: 30, right: 20, zIndex: 10}}>
+        style={{ position: 'absolute', top: 30, right: 20, zIndex: 10 }}>
         <Icon type="font-awesome-5" name="pen" reverse />
       </TouchableOpacity>
       <ShopCards
@@ -333,19 +347,19 @@ function MapScreen({route, navigation}) {
             borderRadius: 5,
             padding: 24,
           }}>
-          <Text style={{textAlign: 'center', fontSize: 18}}>
+          <Text style={{ textAlign: 'center', fontSize: 18 }}>
             Selecciona un rango
           </Text>
           <Slider
             value={radiusToShow}
-            style={{width: '100%', height: 40}}
+            style={{ width: '100%', height: 40 }}
             onValueChange={(value) => setRadiusAux(value)}
             minimumValue={1}
             maximumValue={10}
             minimumTrackTintColor="#7fff00"
             maximumTrackTintColor="#000000"
           />
-          <Text style={{fontSize: 30, textAlign: 'center', marginVertical: 10}}>
+          <Text style={{ fontSize: 30, textAlign: 'center', marginVertical: 10 }}>
             {Math.floor(radiusAux)} Km
           </Text>
           <Button onPress={handleRadius} title="Modificar" />

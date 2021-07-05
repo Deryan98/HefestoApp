@@ -5,7 +5,7 @@ import {getAllProducts} from '../api/products';
 
 const CategoryMealScreen = ({route, navigation}) => {
 
-  const [Details, setProducts] = useState([]);
+  const [Products, setProducts] = useState([]);
   const [Loading, setLoading] = useState(true);
   const [Error, setError] = useState();
   
@@ -13,7 +13,10 @@ const CategoryMealScreen = ({route, navigation}) => {
     try {
         getAllProducts()
         .then((response) => {
-          setProducts(response);
+          let Data = Object.entries(response).map(([id, entry]) => {
+            return { ...entry, id }
+          });
+          setProducts(Data);
           setLoading(false);
           //console.log(response);
         });
@@ -22,12 +25,13 @@ const CategoryMealScreen = ({route, navigation}) => {
         setError(error); 
       };
   });
-
+/*
   const {Products} = route.params;
   const products = [];
-
+*/
   Products.map((product) => {
-    Object.keys(Details).map((detail) => {
+    //Object.keys(Details).map((detail) => {
+      Products.map((detail) => {
       if (product.id == detail.id) {
         products.push(detail);
       }
