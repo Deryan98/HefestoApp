@@ -40,7 +40,7 @@ export const HomeNavigator = ({navigation}) => {
         options={{
           title: 'Hefesto App',
           headerStyle: {
-            backgroundColor: 'black',
+            backgroundColor: '#14213d',
           },
           headerTintColor: 'white',
           headerTitleStyle: {

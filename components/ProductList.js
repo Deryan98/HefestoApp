@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   list: {
     flex: 1,
     justifyContent: 'center',
+    backgroundColor: '#e5e5e5',
     alignItems: 'center',
     padding: 15,
   },

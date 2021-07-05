@@ -16,11 +16,11 @@ export const SubCatTabs = ({route}) => {
       tabBarOptions={{
         labelStyle: {fontSize: 12},
         tabStyle: {flexDirection: 'row'},
-        style: {backgroundColor: 'black'},
+        style: {backgroundColor: '#14213d'},
         scrollEnabled: true,
         showIcon: true,
-        activeTintColor: 'yellow',
-        inactiveTintColor: 'cadetblue',
+        activeTintColor: '#D4AFCD',
+        inactiveTintColor: 'white',
       }}
       screenOptions={({route}) => ({
         //configurando el icono para cada categoría.

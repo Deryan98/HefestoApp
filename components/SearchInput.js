@@ -6,9 +6,9 @@ const SearchInput = () => {
   return (
     <View style={styles.textFields}>
       <Input
-        placeholder="Buscar"
+        placeholder="Buqueda"
         leftIcon={
-          <Icon name="search" type="material" size={30} color="white" />
+          <Icon name="search" type="material" size={30} color="pink" />
         }
         inputStyle={styles.inputStyle}
         inputContainerStyle={styles.inputContainerStyle}

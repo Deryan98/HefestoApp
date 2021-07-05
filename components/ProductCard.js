@@ -1,9 +1,9 @@
 import { useLinkProps } from '@react-navigation/native';
 import * as React from 'react'
 import {Icon} from 'react-native-elements'
-import { View, StyleSheet, TouchableOpacity, ImageBackground, Text } from 'react-native'
+import { View, StyleSheet, TouchableOpacity, ImageBackground, Text, Image } from 'react-native'
 
-const Card = props => {
+const Card2 = props => {
     return (
         <View style={styles.productItem}>
             <TouchableOpacity onPress={props.onSelectProduct}>
@@ -27,9 +27,30 @@ const Card = props => {
     );
 }
 
+const Card = props => {
+    return (
+        <View style={styles.productItem}>
+            <TouchableOpacity onPress={props.onSelectProduct}>
+                <View style={styles.container}>
+                    <View style={styles.imageContainer}>
+                        <Image source={{uri: props.image}} style={styles.testImage} />
+                    </View>
+                    <View style={styles.productInfo}>
+                        <Text style={styles.title}>{props.title}</Text>
+                        <Text style={styles.title}>{props.price}</Text>
+                    </View>
+                </View>
+            </TouchableOpacity>
+        </View>
+    );
+}
+
 const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        padding: 10
+    },
     productItem: {
-        height: 200,
         width: '100%',
         backgroundColor: '#f5f5f5',
         borderRadius: 10,
@@ -41,19 +62,21 @@ const styles = StyleSheet.create({
         height: '100%',
         justifyContent: 'flex-end',
     },
-    mealRow: {
-        flexDirection: 'row'
-    },
-    titleContainer: {
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        paddingVertical: 5,
-        paddingHorizontal: 12
-    },
     title: {
-        fontFamily: 'open-sans-bold',
+        fontFamily: 'Monospace',
         fontSize: 20,
-        color: 'yellow',
-        textAlign: 'center'
+    },
+    testImage: {
+        width: 150,
+        height: 150,
+    },
+    productInfo: {
+        paddingTop: 5
+    },
+    imageContainer: {
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'center'
     }
 });
 

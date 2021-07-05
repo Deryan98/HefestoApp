@@ -13,11 +13,11 @@ export const CatTabs = () => {
       tabBarOptions={{
         labelStyle: {fontSize: 12},
         tabStyle: {flexDirection: 'row'},
-        style: {backgroundColor: 'black'},
+        style: {backgroundColor: '#14213d'},
 
         showIcon: true,
-        activeTintColor: 'chartreuse',
-        inactiveTintColor: 'green',
+        activeTintColor: '#FCA311',
+        inactiveTintColor: 'white',
       }}
       screenOptions={({route}) => ({
         //configurando el icono para cada categoría.
