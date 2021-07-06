@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ActivityIndicator } from 'react-native';
 import MapView, { PROVIDER_GOOGLE, Marker, Circle } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 import Slider from '@react-native-community/slider';
@@ -15,6 +15,8 @@ function MapScreen({ route, navigation }) {
 
   const { product } = route.params;
   const [Stores, setStores] = useState([]);
+  const [shops, setShops] = useState([]);
+  const [userCoords, setUserCoords] = useState([]);
   const [Loading, setLoading] = useState(true);
   const [Error, setError] = useState();
 
@@ -25,28 +27,30 @@ function MapScreen({ route, navigation }) {
           let Data = Object.entries(response).map(([id, entry]) => {
             return { ...entry, id }
           })
-          setStores(Data);
+          let stores = [];
+          //setStores(Data);
           setLoading(false);
-
+          Data.map((store) => {
+            //console.log(product.Stores);
+            Object.values(product.Stores).map((id) => {
+              //console.log('Tienda id: ' + store.id + 'Tienda producto id: ' + id);
+              if (store.id == id) {
+                stores.push(store);
+              }
+            });
+          });
+          setStores(stores)
+          setShops(stores)
+          setUserCoords(stores)
         });
     } catch (error) {
       console.log(error);
       setError(error);
     };
-  });
+  },[shops, userCoords, Stores]);
 
-  const stores = [];
-
-  Stores.map((store) => {
-    //console.log(product.Stores);
-    Object.values(product.Stores).map((id) => {
-      //console.log('Tienda id: ' + store.id + 'Tienda producto id: ' + id);
-      if (store.id == id) {
-        stores.push(store);
-      }
-    });
-  });
-  //console.log(stores);
+  
+  // console.log('StoresASLDKNFKJANSDKF------------', Stores);
   /*
   Object.values(Stores).map((store) => {
     //console.log(Object.keys(product.Stores));
@@ -73,10 +77,11 @@ function MapScreen({ route, navigation }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [swiperState, setSwiperState] = useState(0);
   const [radius, setRadius] = useState(2000);
-  const [shops, setShops] = useState(stores);
-  const [userCoords, setUserCoords] = useState(stores);
   const [selectedShops, setSelectedShops] = useState([]);
   const mapRef = useRef(null);
+  
+  // console.log('shops--------', shops);
+  // console.log('StoresASLDKNFKJANSDKF------------', Stores);
 
   useEffect(() => {
     requestPermissions();
@@ -179,6 +184,7 @@ function MapScreen({ route, navigation }) {
     return shops.map((store, index) => {
       return (
         <Circle
+          key={index}
           style={{ zIndex: 10 }}
           center={store.coords}
           radius={200}
@@ -199,6 +205,7 @@ function MapScreen({ route, navigation }) {
 
   const renderPerimeter = () => {
     if (userCoords && userCoords.longitude) {
+      console.log("Render Perimeter:",userCoords)
       return (
         <Circle
           center={userCoords}
@@ -238,7 +245,7 @@ function MapScreen({ route, navigation }) {
           );
           // aqui
           let updatedShops = selected.filter((sp) => sp.name !== shop.name);
-            //console.log("sp.name", sp.name, "shop.name", shop.name);
+          //console.log("sp.name", sp.name, "shop.name", shop.name);
           updatedShops.unshift(shop);
           setSwiperState(0);
           setSelectedShops(updatedShops);
@@ -269,7 +276,7 @@ function MapScreen({ route, navigation }) {
       });
     }
   };
-
+//HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 280
   const handlePropertyChange = (currentName) => {
     const updatedShops = shops.map((shop, index) => {
       if (shop.name === currentName) {
@@ -281,7 +288,7 @@ function MapScreen({ route, navigation }) {
 
     setShops(updatedShops);
   };
-
+//HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 291 
   const handleSwiperIndexChange = (currentIndex) => {
     const moveToShop = selectedShops[currentIndex];
     handlePropertyChange(moveToShop.name);
@@ -312,6 +319,8 @@ function MapScreen({ route, navigation }) {
   };
 
   return (
+    
+    
     <View style={{ flex: 1 }}>
       <MapView
         ref={mapRef}
@@ -367,6 +376,7 @@ function MapScreen({ route, navigation }) {
       </Modal>
     </View>
   );
+  
 }
 
 export default MapScreen;
