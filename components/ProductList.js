@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, FlatList, StyleSheet} from 'react-native';
-import {Detail} from '../data/dummy-data.js';
+//import {Detail} from '../data/dummy-data.js';
 import ProductCard from './ProductCard';
 
 const ProductList = (props) => {

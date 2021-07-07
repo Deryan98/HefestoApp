@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, FlatList, StyleSheet, TouchableOpacity} from 'react-native';
-import {Stores} from '../data/dummy-data';
+import { View, Text, FlatList, StyleSheet, TouchableOpacity } from 'react-native';
+//import {Stores} from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
 
-const CategoriesScreen = ({route, navigation}) => {
-  const {Store} = route.params;
+const CategoriesScreen = ({ route, navigation }) => {
+  const { Store } = route.params;
   const renderGridItem = (itemData) => {
     const Products = [];
     itemData.item.Products.map((Product) => {

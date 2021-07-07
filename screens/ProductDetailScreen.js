@@ -3,7 +3,7 @@ import React, { useEffect, useCallback } from 'react';
 import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 //import {HeaderBar} from '../components/HeaderBar';
 import { HeaderDetail } from '../components/HeaderDetail';
-import { Details } from '../data/dummy-data';
+//import { Details } from '../data/dummy-data';
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleWishlist } from '../store/actions/products'
 
