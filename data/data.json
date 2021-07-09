@@ -1,0 +1,525 @@
+{
+  "stores": {
+    "str1": {
+      "id": "str1",
+      "name": "AEON",
+      "description": "Somos una empresa dedicada a la venta y distribución de equipos de alto rendimiento para aplicaciones exigentes y equipos Gamer ,servicios tecnológicos e informáticos, diferenciados por nuestra calidad de productos y sistemas seguros, satisfaciendo las necesidades de nuestros clientes con el conocimiento, la tecnología, valores de ética, responsabilidad y trabajo en equipo, logrando la excelencia.",
+      "logo": "https://www.aeon.com.sv/web/image/website/1/logo/Aeon%20Computers?unique=062c6e2",
+      "correo": "ventas@aeon.com.sv",
+      "telefono": "2210-3865",
+      "coords": {
+        "latitude": 13.702328,
+        "longitude": -89.237885
+      },
+      "Subcategories": {
+        "sc2": {
+          "id": "sc2",
+          "name": "Medium",
+          "icon": "laptop-chromebook",
+          "iconType": "material-community",
+          "color": "red",
+          "Products": {
+            "p3": {
+              "id": "p3"
+            },
+            "p4": {
+              "id": "p4"
+            }
+          }
+        },
+        "sc1": {
+          "id": "sc1",
+          "name": "Basic",
+          "icon": "laptop",
+          "iconType": "material-community",
+          "color": "yellow",
+          "Products": {
+            "p1": {
+              "id": "p1"
+            },
+            "p2": {
+              "id": "p2"
+            }
+          }
+        }
+      },
+      "isSelected": false
+    },
+    "str2": {
+      "id": "str2",
+      "name": "KPC Hardware",
+      "description": "KPC Hardware, fue creada como una división de G Group S.A., con la visión de convertirse en empresa líder en ventas y soporte técnico en el mercado de tecnologías para usuario final de gama media y alta en El Salvador.   Tenemos como propósito, representar las mejores marcas de hardware del mercado mundial, que permitan a nuestros clientes de diseño, ingeniería y entusiastas “gamers”, satisfacer y exceder cualquier necesidad que sus equipos demanden, brindando para ello, la debida asesoría técnica que otorgue a nuestros compradores, una inversión efectiva y duradera, además de los precios más justos posibles y la mejor atención personalizada que podamos entregar.  Con énfasis en equipos silenciosos y bajas temperaturas de operación, alargamos la vida útil y maximizamos la inversión que nuestros clientes realizan, cuando adquieren nuestros productos.",
+      "logo": "https://kpchardware.com/img/kpc-hardwware-1508193268.jpg",
+      "correo": "info@kpchardware.com",
+      "telefono": "2233-7600",
+      "coords": {
+        "latitude": 13.702978,
+        "longitude": -89.237885
+      },
+      "Subcategories": {
+        "sc4": {
+          "id": "sc4",
+          "name": "Design",
+          "icon": "video-3d-variant",
+          "iconType": "material-community",
+          "color": "red"
+        },
+        "sc1": {
+          "id": "sc1",
+          "name": "Basic",
+          "icon": "laptop",
+          "iconType": "material-community",
+          "color": "yellow"
+        }
+      },
+      "isSelected": false
+    },
+    "str3": {
+      "id": "str3",
+      "name": "XHT",
+      "description": "Xtreme Hardware Technology , Productos Garantizados Al Mejor Precio y Con La Mejor Calidad. Escribenos , Recuerda Si no lo tenemos ¡lo conseguimos!",
+      "logo": "https://scontent.fsal5-1.fna.fbcdn.net/v/t1.0-9/43524475_1146098055541118_6706809367934533632_o.png?_nc_cat=110&ccb=2&_nc_sid=09cbfe&_nc_ohc=X23_W_gqXCEAX9tfqb1&_nc_ht=scontent.fsal5-1.fna&oh=3ea892b194b4c5faca49539667f07512&oe=5FEB2F2A",
+      "correo": "xht@gmail.com",
+      "telefono": "25275703",
+      "coords": {
+        "latitude": 13.675334,
+        "longitude": -89.263428
+      },
+      "Subcategories": {
+        "sc3": {
+          "id": "sc3",
+          "name": "High",
+          "icon": "laptop-mac",
+          "iconType": "material-community",
+          "color": "green",
+          "Products": {
+            "p5": {
+              "id": "p5"
+            },
+            "p6": {
+              "id": "p6"
+            }
+          }
+        },
+        "sc4": {
+          "id": "sc4",
+          "name": "Design",
+          "icon": "video-3d-variant",
+          "iconType": "material-community",
+          "color": "red",
+          "Products": {
+            "p7": {
+              "id": "p7"
+            },
+            "p8": {
+              "id": "p8"
+            }
+          }
+        }
+      },
+      "isSelected": false
+    },
+    "str4": {
+      "id": "str4",
+      "name": "Kaifa Store",
+      "description": "Somos una empresa 100% Salvadoreña  dedicada a brindarle lo más novedoso en Computadoras de Alto Rendimiento y sus componentes principales. Con productos de las mejores marcas internacionales en línea de Cases, Procesadores, Disipadores, Moherboards, Tarjetas de Video, Memoria Ram, Discos Duros, SSD, Enfriamiento líquido Laptops y Periféricos como Impresores, Proyectores Teclados, Mouse Básicos y Gaming entre otros.",
+      "logo": "https://scontent.fsal5-1.fna.fbcdn.net/v/t31.0-8/25488441_1517593111695710_8058745423180531550_o.jpg?_nc_cat=103&ccb=2&_nc_sid=09cbfe&_nc_ohc=XbgLHLaErogAX_dnMJ0&_nc_oc=AQliebC5kfqP0EHzwLqcT4tqv5XmIGC531vYjhC0w4okMfCP844I4ogeOHBXThOSdOg&_nc_ht=scontent.fsal5-1.fna&oh=da0df58bdc5fc5064c0f4e81f4c7cf26&oe=5FED6AF5",
+      "correo": "kayfa.info49@gmail.com",
+      "telefono": "22604027",
+      "coords": {
+        "latitude": 13.7008341,
+        "longitude": -89.2202497
+      },
+      "Subcategories": {
+        "sc2": {
+          "id": "sc2",
+          "name": "Medium",
+          "icon": "laptop-chromebook",
+          "iconType": "material-community",
+          "color": "red",
+          "Products": {
+            "p3": {
+              "id": "p3"
+            },
+            "p4": {
+              "id": "p4"
+            }
+          }
+        },
+        "sc3": {
+          "id": "sc3",
+          "name": "High",
+          "icon": "laptop-mac",
+          "iconType": "material-community",
+          "color": "green",
+          "Products": {
+            "p5": {
+              "id": "p5"
+            },
+            "p6": {
+              "id": "p6"
+            }
+          }
+        },
+        "sc4": {
+          "id": "sc4",
+          "name": "Design",
+          "icon": "video-3d-variant",
+          "iconType": "material-community",
+          "color": "red",
+          "Products": {
+            "p7": {
+              "id": "p7"
+            },
+            "p8": {
+              "id": "p8"
+            }
+          }
+        },
+        "sc5": {
+          "id": "sc5",
+          "name": "Gaming",
+          "icon": "gamepad-variant",
+          "iconType": "material-community",
+          "color": "cyan",
+          "Products": {
+            "p9": {
+              "id": "p9"
+            },
+            "p10": {
+              "id": "p10"
+            }
+          }
+        }
+      },
+      "isSelected": false
+    }
+  },
+  "products": {
+    "p1": {
+      "id": "p1",
+      "marca": "Lenovo",
+      "modelo": "IdeaPad 3",
+      "sistema_operativo": "Windows 10",
+      "memoria": "256GB SSD",
+      "price": "$450",
+      "caracteristicas": "[' 8GB RAM -', ' Intel Pentium 7 -', ' 17 pulgadas ']",
+      "subCategory": "sc1",
+      "image": "https://www.lenovo.com/medias/lenovo-thinkpad-l390-5th-gen-gallery-07.jpg?context=bWFzdGVyfHJvb3R8MTAzMjI5fGltYWdlL2pwZ3xoMDAvaDViLzk4NjMxNTc3NzY0MTQuanBnfDIxYmY4NWEzMDE2ZGI4M2IzODRhOTY0NTcyMDhhZDExZDlmNmI1MmExYjE1MzExZDhkNzQwOTNlNGQzYjQ4Zjk',",
+      "Stores": {
+        "str1": "str1",
+        "str2": "str2"
+      }
+    },
+    "p2": {
+      "id": "p2",
+      "marca": "Mini PC Asrock",
+      "modelo": "90BXG3701",
+      "sistema_operativo": "Windows 10",
+      "memoria": "Espacio para dos discos duros/HDD de 2,5",
+      "price": "$170.00",
+      "caracteristicas": "[' DDR4 de alta velocidad - DDR4-2933MHz (Ryzen) -',' AA20BAOW intel -', ' -']",
+      "subCategory": "sc1",
+      "image": "https://aeon.com.sv/web/image/product.product/6309/image_1024/%5B6763%5D%20Mini%20PC%20Asrock%20%2090BXG3701-A20BAOW%20intel?unique=5cc788f",
+      "Stores": {
+        "str1": "str1",
+        "str2": "str2"
+      }
+    },
+    "p3": {
+      "id": "p3",
+      "marca": "Mini PC ZOTAC",
+      "modelo": "CI620 NANO",
+      "sistema_operativo": "Windows 10",
+      "memoria": "SSD 120 GB",
+      "price": "$399.00",
+      "caracteristicas": "[' DDR4 4GB -', ' intel I3-8130U -', ' -']",
+      "subCategory": "sc2",
+      "image": "https://aeon.com.sv/web/image/product.product/5148/image_1024/%5B5039%5D%20Mini%20PC%20ZOTAC%20CI620%20NANO%20I3-8130U%2C%204GB%20DDR4%2C%20SSD%20120GB?unique=b093622",
+      "Stores": {
+        "str1": "str1",
+        "str4": "str4"
+      }
+    },
+    "p4": {
+      "id": "p4",
+      "marca": "Mini PC Asrock",
+      "modelo": "G4930",
+      "sistema_operativo": "Windows 10",
+      "memoria": "SSD 240GB",
+      "price": "$332.00",
+      "caracteristicas": "[' 8GB DDR4 -', ' Intel Celeron G4930 -', ' -']",
+      "subCategory": "sc2",
+      "image": "https://aeon.com.sv/web/image/product.product/6748/image_1024/Mini%20PC%20Asrock%20Intel%20G4930%2C%208GB%20DDR4%2C%20SSD%20240GB%20WiFi%20%288GB%2C%20Teclado%20y%20Mouse%20B%C3%A1sico%29?unique=827cdaf",
+      "Stores": {
+        "str1": "str1",
+        "str4": "str4"
+      }
+    },
+    "p5": {
+      "id": "p5",
+      "marca": "HP",
+      "modelo": "PROBOOK 440 G7",
+      "sistema_operativo": "Windows 10 Pro 64-bit",
+      "memoria": "SATA de 2.5″ de 1 TB",
+      "price": "$332.00",
+      "caracteristicas": "['4 GB DDR4 SDRAM -',' Intel® Core™ i7-10510U (4.90 GHz) -','LCD delgada de 15.6″ (1366 x 768)']",
+      "subCategory": "sc3",
+      "image": "https://kpchardware.com/img/p/1/0/0/7/8/10078-home_default.jpg",
+      "Stores": {
+        "str3": "str3",
+        "str4": "str4"
+      }
+    },
+    "p6": {
+      "id": "p6",
+      "marca": "HP",
+      "modelo": "OMEN 15-dc1002la",
+      "sistema_operativo": "Windows 10",
+      "memoria": "512GB SSD",
+      "price": "$1540",
+      "caracteristicas": "[' 8GB RAM -', ' Intel Core i5 -', ' 15,6″ -']",
+      "subCategory": "sc3",
+      "image": "https://www.kayfastore.com/assets/images/galleries/1591026754142230.jpg",
+      "Stores": {
+        "str3": "str3",
+        "str4": "str4"
+      }
+    },
+    "p7": {
+      "id": "p7",
+      "marca": "CPU Panzer",
+      "modelo": "PRO 3700X",
+      "sistema_operativo": "Windows 10",
+      "memoria": "SSD 240GB",
+      "price": "$1,550.00",
+      "caracteristicas": "[' 16GB Ram -',' AMD Ryzen™ 7 3700X 3.6Ghz up to 4.2Ghz AM4 -',' - ',]",
+      "subCategory": "sc4",
+      "image": "https://scontent.fsal1-1.fna.fbcdn.net/v/t1.0-9/121537082_3324789797570024_5551759657868526251_o.jpg?_nc_cat=106&ccb=2&_nc_sid=730e14&_nc_ohc=-0IBZzPn8zkAX92diQB&_nc_ht=scontent.fsal1-1.fna&oh=996b39a38967891120b76fa4afcaa1f9&oe=5FEE504B",
+      "Stores": {
+        "str2": "str2",
+        "str3": "str3",
+        "str4": "str4"
+      }
+    },
+    "p8": {
+      "id": "p8",
+      "marca": "DELL",
+      "modelo": "LATITUDE 5490",
+      "sistema_operativo": "Windows 10 PRO",
+      "memoria": "SSD 256GB",
+      "price": "$1,599.00",
+      "caracteristicas": "[' RAM 8GB -',' INTEL CORE I7 8650U -',' PANTALLA LED HD 14',]",
+      "subCategory": "sc4",
+      "image": "https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/latitude_notebooks/14_5490/non_touch/notebooks-latitude-14-5490-nt-campaign-hero-504x350-ng.psd?fmt=jpg",
+      "Stores": {
+        "str2": "str2",
+        "str3": "str3",
+        "str4": "str4"
+      }
+    },
+    "p9": {
+      "id": "p9",
+      "marca": "MeshTown",
+      "modelo": "CPU Gaming",
+      "sistema_operativo": "Windows 10 PRO",
+      "memoria": "SSD 240GB",
+      "price": "$1,599.00",
+      "caracteristicas": "[' 16GB RAM -', ' Ryzen 3 3100 -', ' - ']",
+      "subCategory": "sc5",
+      "image": "https://aeon.com.sv/web/image/product.product/6803/image_1024/CPU%20Gaming%20MeshTown%2C%20Ryzen%203%203100%2C%2016GB%20RAM%2C%20SSD%20240GB%2C%20RX580%208GB%2C%20600W%2080+%20RGB%20%28Ryzen%203100%29?unique=2c012b4",
+      "Stores": {
+        "str1": "str1",
+        "str4": "str4"
+      }
+    },
+    "p10": {
+      "id": "p10",
+      "marca": "Acer",
+      "modelo": "Nitro 5",
+      "sistema_operativo": "Windows 10 Home",
+      "memoria": "SSD 256GB",
+      "price": "$599.99",
+      "caracteristicas": "[' 8GB RAM -', ' Intel Core i5-9300H -', '15.6 Pulgadas']",
+      "subCategory": "sc5",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/71s1LRpaprL._AC_SL1500_.jpg",
+      "Stores": {
+        "str1": "str1",
+        "str4": "str4"
+      }
+    },
+    "p11": {
+      "id": "p11",
+      "marca": "Computadora Completa",
+      "modelo": "GT710",
+      "sistema_operativo": "Windows 10 Home",
+      "memoria": "SSD 240GB",
+      "price": "$650.00",
+      "caracteristicas": "[' 8GB RAM -', ' Intel Core i5 -', 'Monitor Samsung 22”']",
+      "subCategory": "sc6",
+      "image": "https://xht.com.sv/wp-content/uploads/2020/08/photo_2020-08-19_22-06-55.jpg",
+      "Stores": {
+        "str1": "str1"
+      }
+    },
+    "p12": {
+      "id": "p12",
+      "marca": "Computadora AMD Ryzen 3",
+      "modelo": "3200G",
+      "sistema_operativo": "Windows 10 Home",
+      "memoria": "SSD 240GB",
+      "price": "$650.00",
+      "caracteristicas": "[' 8GB RAM -', ' AMD Ryzen 3 3200G -', ' - ']",
+      "subCategory": "sc6",
+      "image": "https://xht.com.sv/wp-content/uploads/2020/09/Computadora-AMD-Ryzen-3-3200G-8GB.jpg",
+      "Stores": {
+        "str1": "str1"
+      }
+    }
+  },
+  "categories": {
+    "c1": {
+      "id": "c1",
+      "title": "Computadora",
+      "iconName": "laptop"
+    },
+    "c2": {
+      "id": "c2",
+      "title": "Componentes",
+      "iconName": "memory"
+    },
+    "c3": {
+      "id": "c3",
+      "title": "Periféricos",
+      "iconName": "keyboard"
+    }
+  },
+  "subcategory": {
+    "sc1": {
+      "id": "sc1",
+      "title": "Basic",
+      "iconName": "laptop",
+      "iconType": "material-community",
+      "idCategory": "c1"
+    },
+    "sc2":{
+      "id": "sc2",
+      "title": "Medium",
+      "iconName": "laptop-chromebook",
+      "iconType":"material-community",
+      "idCategory": "c1"
+    },
+    "sc3":{ 
+      "id": "sc3",
+      "title": "High",
+      "iconName": "laptop-mac",
+      "iconType":"material-community",
+      "idCategory": "c1"
+    },
+    "sc4":{ 
+      "id": "sc4",
+      "title": "Design",
+      "iconName": "video-3d-variant",
+      "iconType":"material-community",
+      "idCategory": "c1"
+    },
+    "sc5": {
+      "id": "sc1",
+      "title": "Gaming",
+      "iconName": "gamepad-variant",
+      "iconType": "material-community",
+      "idCategory": "c1"
+    },
+    "sc6": { 
+      "id": "sc1",
+      "title": "Streaming",
+      "iconName": "youtube-gaming",
+      "iconType": "material-community",
+      "idCategory": "c1"
+    },
+    "sc7": { 
+      "id": "sc7",
+      "title": "CPU",
+      "iconName": "cpu",
+      "iconType": "feather",
+      "idCategory": "c2"
+    },
+    "sc8": { 
+      "id": "sc8",
+      "title": "RAM",
+      "iconName": "memory",
+      "iconType": "font-awesome-5",
+      "idCategory": "c2"
+    },
+    "sc9": { 
+      "id": "sc9",
+      "title": "Video",
+      "iconName": "videogame-asset",
+      "iconType": "material",
+      "idCategory": "c2"
+    },
+    "sc10": {
+      "id": "sc10",
+      "title": "Power Supply",
+      "iconName": "power-settings",
+      "iconType": "material-community",
+      "idCategory": "c2"
+    },
+    "sc11": {
+      "id": "sc11",
+      "title": "MotherBoard",
+      "iconName": "circuit-board",
+      "iconType": "octicon",
+      "idCategory": "c2"
+    },
+    "sc12": {
+      "id": "sc12",
+      "title": "Hard Disk",
+      "iconName": "harddisk",
+      "iconType": "material-community",
+      "idCategory": "c2"
+    },
+    "sc13": {
+      "id": "sc13",
+      "title": "USB",
+      "iconName": "usb",
+      "iconType": "material",
+      "idCategory": "c3"
+    },
+    "sc14": {
+      "id": "sc14",
+      "title": "Monitor",
+      "iconName": "monitor",
+      "iconType": "material",
+      "idCategory": "c3"
+    },
+    "sc15": {
+      "id": "sc15",
+      "title": "Keyboard",
+      "iconName": "keyboard",
+      "iconType": "material",
+      "idCategory": "c3"
+    },
+    "sc16": {
+      "id": "sc16",
+      "title": "Mouse",
+      "iconName": "mouse",
+      "iconType": "material",
+      "idCategory": "c3"
+    },
+    "sc17": {
+      "id": "sc17",
+      "title": "Printer",
+      "iconName": "printer",
+      "iconType": "material-community",
+      "idCategory": "c3"
+    },
+    "sc18": {
+      "id": "sc18",
+      "title": "Furniture",
+      "iconName": "desk",
+      "iconType": "material-community",
+      "idCategory": "c3"
+    }
+  }
+}

@@ -17,8 +17,21 @@ function MapScreen({ route, navigation }) {
   const [Stores, setStores] = useState([]);
   const [shops, setShops] = useState([]);
   const [userCoords, setUserCoords] = useState([]);
-  const [Loading, setLoading] = useState(true);
-  const [Error, setError] = useState();
+  const [modal, setModal] = useState(false);
+  const [radiusAux, setRadiusAux] = useState(1);
+  const [radiusToShow, setRadiusToShow] = useState(1);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [swiperState, setSwiperState] = useState(0);
+  const [radius, setRadius] = useState(2000);
+  const [selectedShops, setSelectedShops] = useState([]);
+  const mapRef = useRef(null);
+  const [currentLocation, setCurrentLocation] = useState({
+    latitude: 37.78825,
+    longitude: -122.4324,
+
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421,
+  });
 
   useEffect(() => {
     try {
@@ -29,7 +42,7 @@ function MapScreen({ route, navigation }) {
           })
           let stores = [];
           //setStores(Data);
-          setLoading(false);
+          //setLoading(false);
           Data.map((store) => {
             //console.log(product.Stores);
             Object.values(product.Stores).map((id) => {
@@ -39,17 +52,19 @@ function MapScreen({ route, navigation }) {
               }
             });
           });
-          setStores(stores)
-          setShops(stores)
-          setUserCoords(stores)
+          setStores(stores[0]);
+          setShops(stores[0]);
+          setUserCoords(stores[0]);
         });
     } catch (error) {
       console.log(error);
       setError(error);
     };
-  },[shops, userCoords, Stores]);
+  }, [shops, userCoords, Stores]);
 
-  
+  //console.log("userCoords-----", userCoords)
+  //console.log("shops-----", shops)
+
   // console.log('StoresASLDKNFKJANSDKF------------', Stores);
   /*
   Object.values(Stores).map((store) => {
@@ -64,22 +79,9 @@ function MapScreen({ route, navigation }) {
   //console.log('Tiendas: ');
   //console.log(stores);
 
-  const [currentLocation, setCurrentLocation] = useState({
-    latitude: 37.78825,
-    longitude: -122.4324,
 
-    latitudeDelta: 0.0922,
-    longitudeDelta: 0.0421,
-  });
-  const [modal, setModal] = useState(false);
-  const [radiusAux, setRadiusAux] = useState(1);
-  const [radiusToShow, setRadiusToShow] = useState(1);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [swiperState, setSwiperState] = useState(0);
-  const [radius, setRadius] = useState(2000);
-  const [selectedShops, setSelectedShops] = useState([]);
-  const mapRef = useRef(null);
-  
+
+
   // console.log('shops--------', shops);
   // console.log('StoresASLDKNFKJANSDKF------------', Stores);
 
@@ -89,9 +91,22 @@ function MapScreen({ route, navigation }) {
   }, []);
 
   useEffect(() => {
+    console.log("Latitude?------->", userCoords.latitude);
+
     if (userCoords && userCoords.latitude) {
       getNearlyShops();
-      setDefaultValues();
+      //setDefaultValues();
+      //console.log("SHOPS----------", userCoords);
+      let array = shops.map((shop) => {
+        console.log("SHOP------>", shop);
+        console.log("COOOORDSSSSSSSS", shop.coords);
+        ({
+          ...shop,
+          isSelected: false,
+          distance: getDistance(userCoords, shop.coords),
+        })
+      });
+      setShops(array);
     }
   }, [userCoords, radius]);
 
@@ -102,11 +117,16 @@ function MapScreen({ route, navigation }) {
   }, [selectedShops]);
 
   const setDefaultValues = () => {
-    let array = shops.map((shop) => ({
-      ...shop,
-      isSelected: false,
-      distance: getDistance(userCoords, shop.coords),
-    }));
+    console.log("SHOPS----------", userCoords);
+    let array = shops.map((shop) => {
+      console.log("SHOP------>", shop);
+      console.log("COOOORDSSSSSSSS", shop.coords);
+      ({
+        ...shop,
+        isSelected: false,
+        distance: getDistance(userCoords, shop.coords),
+      })
+    });
     setShops(array);
   };
 
@@ -117,10 +137,10 @@ function MapScreen({ route, navigation }) {
       latitude: userCoords.latitude,
       longitude: userCoords.longitude,
     };
-
+    console.log("SHOPS----------", shops);
     shops.forEach((store) => {
       let distance = getDistance(store.coords, userCoordsLatLon);
-      console.log(store.coords);
+      console.log("Store coords----------------", store.coords);
       if (distance <= radius) {
         nearShops.push({
           ...store,
@@ -181,31 +201,36 @@ function MapScreen({ route, navigation }) {
   };
 
   const renderMarkers = () => {
-    return shops.map((store, index) => {
-      return (
-        <Circle
-          key={index}
-          style={{ zIndex: 10 }}
-          center={store.coords}
-          radius={200}
-          fillColor={
-            store.isSelected
-              ? 'rgba(255, 162, 112, 0.5)'
-              : 'rgba(158, 158, 158, 0.5)'
-          }
-          strokeColor={
-            store.isSelected
-              ? 'rgba(255, 162, 112, 1)'
-              : 'rgba(158, 158, 158, 1)'
-          }
-        />
-      );
+    return Object.entries(shops).map((store, index) => {
+      let storeAux = [];
+      if (store[0] == "coords") {
+        storeAux.push(store[1]);
+        return (
+          <Circle
+            key={index}
+            style={{ zIndex: 10 }}
+            center={storeAux[0]}
+            radius={200}
+            fillColor={
+              store.isSelected
+                ? 'rgba(255, 162, 112, 0.5)'
+                : 'rgba(158, 158, 158, 0.5)'
+            }
+            strokeColor={
+              store.isSelected
+                ? 'rgba(255, 162, 112, 1)'
+                : 'rgba(158, 158, 158, 1)'
+            }
+          />
+        );
+
+      }
     });
   };
 
   const renderPerimeter = () => {
     if (userCoords && userCoords.longitude) {
-      console.log("Render Perimeter:",userCoords)
+      console.log("Render Perimeter:", userCoords)
       return (
         <Circle
           center={userCoords}
@@ -276,21 +301,27 @@ function MapScreen({ route, navigation }) {
       });
     }
   };
-//HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 280
+  //HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 280
   const handlePropertyChange = (currentName) => {
+    console.longitude("Shops-----> ", shop);
     const updatedShops = shops.map((shop, index) => {
       if (shop.name === currentName) {
         return { ...shop, isSelected: true };
       }
       return { ...shop, isSelected: false };
     });
-    console.log('este es el valor', updatedShops);
+    console.log('updatedShops--->', updatedShops);
+
 
     setShops(updatedShops);
+
+
   };
-//HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 291 
+  //HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 291 
   const handleSwiperIndexChange = (currentIndex) => {
+    console.log("SelectedShops------------------", selectedShops);
     const moveToShop = selectedShops[currentIndex];
+    console.log("MoveToShop------------------", moveToShop);
     handlePropertyChange(moveToShop.name);
     setCurrentIndex(currentIndex);
 
@@ -319,8 +350,8 @@ function MapScreen({ route, navigation }) {
   };
 
   return (
-    
-    
+
+
     <View style={{ flex: 1 }}>
       <MapView
         ref={mapRef}
@@ -376,7 +407,7 @@ function MapScreen({ route, navigation }) {
       </Modal>
     </View>
   );
-  
+
 }
 
 export default MapScreen;
