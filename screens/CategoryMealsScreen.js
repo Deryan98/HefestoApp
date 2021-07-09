@@ -25,7 +25,6 @@ const CategoryMealScreen = ({route, navigation}) => {
         setError(error); 
       };
   });
-
 /*
   const {Products} = route.params;
   const products = [];

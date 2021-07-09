@@ -1,48 +1,27 @@
-//import * as React from 'react';
-import React, { useEffect, useState } from 'react';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { Icon } from 'react-native-elements';
-import { SubCatTabs } from './children/SubCatTabs';
-//import {CATEGORIES} from '../../../data/dummy-data';
-import { getAllCategories } from '../../../api/categories';
+import * as React from 'react';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
+import {Icon} from 'react-native-elements';
+import {SubCatTabs} from './children/SubCatTabs';
+import {CATEGORIES} from '../../../data/dummy-data';
 
 export const CatTabs = () => {
-  const [CATEGORIES, setCategories] = useState([]);
-  
   //creating the navigator
   const CatTab = createMaterialTopTabNavigator();
-
-  useEffect(() => {
-    try {
-      getAllCategories()
-        .then((response) => {
-          let Data = Object.entries(response).map(([id, entry]) => {
-            return { ...entry, id }
-          });
-          setCategories(Data);
-          //setLoading(false);
-          //console.log(response);
-        });
-    } catch (e) {
-      console.log(e);
-      setError(e);
-    };
-  });
 
   return (
     <CatTab.Navigator
       tabBarOptions={{
-        labelStyle: { fontSize: 12 },
-        tabStyle: { flexDirection: 'row' },
-        style: { backgroundColor: 'black' },
+        labelStyle: {fontSize: 12},
+        tabStyle: {flexDirection: 'row'},
+        style: {backgroundColor: 'black'},
 
         showIcon: true,
         activeTintColor: 'chartreuse',
         inactiveTintColor: 'green',
       }}
-      screenOptions={({ route }) => ({
+      screenOptions={({route}) => ({
         //configurando el icono para cada categoría.
-        tabBarIcon: ({ color, size }) => {
+        tabBarIcon: ({color, size}) => {
           //variables a usar
           let iconName, catTitle, category;
           //obteniendo el nombre de la vista

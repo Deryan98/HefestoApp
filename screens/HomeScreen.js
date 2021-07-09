@@ -1,16 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
-//import {SUBCATEGORIES, PRODUCTS} from '../data/dummy-data';
+import {SUBCATEGORIES, PRODUCTS} from '../data/dummy-data';
 import ProductList from '../components/ProductList';
 //import {Details} from '../data/dummy-data';
 
 import {getAllProducts} from '../api/products';
-import {getAllSubCategories} from '../api/subcategory';
 
 const HomeScreen = ({route, navigation}) => {
 
   const [Products, setProducts] = useState([]);
-  const [SUBCATEGORIES, setSubCategories] = useState([]);
   const [Loading, setLoading] = useState(true);
   const [Error, setError] = useState();
   
@@ -22,19 +20,12 @@ const HomeScreen = ({route, navigation}) => {
             return { ...entry, id }
           });
           setProducts(Data);
+          setLoading(false);
           //console.log(response);
         });
-        getAllSubCategories()
-        .then((response) => {
-          let Data = Object.entries(response).map(([id, entry]) => {
-            return { ...entry, id}
-          });
-          setSubCategories(Data);
-          setLoading(false);
-        });
-      } catch (e) { 
-        console.log(e);
-        setError(e); 
+      } catch (error) { 
+        console.log(error);
+        setError(error); 
       };
   });
 

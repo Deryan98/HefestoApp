@@ -1,53 +1,7 @@
 import { Details } from '../../data/dummy-data';
-import React, { useEffect, useState } from 'react';
-//import Product from '../../models/Product';
+import Product from '../../models/Product';
 import { TOGGLE_WISHLIST } from '../actions/products';
-import { getAllProducts } from '../../api/products';
-/*
-function productsReturn() {
-    const [Products, setProducts] = useState([]);
 
-    useEffect (() => {
-        try {
-            getAllProducts()
-            .then((response) => {
-            let Data = Object.entries(response).map(([id, entry]) => {
-                return { ...entry, id }
-            });
-            setProducts(Data);
-            });
-        } catch (error) { 
-            console.log(error);
-            setError(error); 
-        };
-    });
-    return { ...Products};
-}
-
-let {productsAux} = productsReturn();
-
-const initialState = {
-    products: () => {
-        const [Products, setProducts] = useState([]);
-        useEffect(() => {
-            try {
-                getAllProducts()
-                    .then((response) => {
-                        let Data = Object.entries(response).map(([id, entry]) => {
-                            return { ...entry, id }
-                        });
-                        setProducts(Data);
-                    });
-            } catch (error) {
-                console.log(error);
-                setError(error);
-            };
-        }); return {...Products};
-    },
-    wishProducts: []
-};
-
-*/
 const initialState = {
     products: Details,
     wishProducts: []

@@ -2,9 +2,6 @@
 #
 .DS_Store
 
-#Data
-data/data.json
-
 # Xcode
 #
 build/

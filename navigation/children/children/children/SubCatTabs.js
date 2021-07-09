@@ -1,38 +1,10 @@
-//import * as React from 'react';
-import React, { useEffect, useState } from 'react';
-import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import * as React from 'react';
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import HomeScreen from '../../../../screens/HomeScreen';
-import { Icon } from 'react-native-elements';
-//import {CATEGORIES, SUBCATEGORIES} from '../../../../data/dummy-data';
-import { getAllCategories } from '../../../../api/categories';
-import { getAllSubCategories } from '../../../../api/subcategory';
+import {Icon} from 'react-native-elements';
+import {CATEGORIES, SUBCATEGORIES} from '../../../../data/dummy-data';
 
-export const SubCatTabs = ({ route }) => {
-  const [CATEGORIES, setCategories] = useState([]);
-  const [SUBCATEGORIES, setSubCategories] = useState([]);
-  
-  useEffect(() => {
-    try {
-      getAllCategories()
-        .then((response) => {
-          let Data = Object.entries(response).map(([id, entry]) => {
-            return { ...entry, id }
-          });
-          setCategories(Data);
-        });
-      getAllSubCategories()
-        .then((response) => {
-          let Data = Object.entries(response).map(([id, entry]) => {
-            return { ...entry, id }
-          });
-          setSubCategories(Data);
-        });
-    } catch (error) {
-      console.log(error);
-      setError(error);
-    };
-  });
-
+export const SubCatTabs = ({route}) => {
   const SubCatTab = createMaterialTopTabNavigator();
   //obteniendo el id de la categoría
   const categoryId = CATEGORIES.find(
@@ -42,17 +14,17 @@ export const SubCatTabs = ({ route }) => {
   return (
     <SubCatTab.Navigator
       tabBarOptions={{
-        labelStyle: { fontSize: 12 },
-        tabStyle: { flexDirection: 'row' },
-        style: { backgroundColor: 'black' },
+        labelStyle: {fontSize: 12},
+        tabStyle: {flexDirection: 'row'},
+        style: {backgroundColor: 'black'},
         scrollEnabled: true,
         showIcon: true,
         activeTintColor: 'yellow',
         inactiveTintColor: 'cadetblue',
       }}
-      screenOptions={({ route }) => ({
+      screenOptions={({route}) => ({
         //configurando el icono para cada categoría.
-        tabBarIcon: ({ color, size }) => {
+        tabBarIcon: ({color, size}) => {
           //Encontrando la Subcategoría
           let scategory = SUBCATEGORIES.find(
             (subCat) => subCat.title === route.name,
