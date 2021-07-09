@@ -91,15 +91,15 @@ function MapScreen({ route, navigation }) {
   }, []);
 
   useEffect(() => {
-    console.log("Latitude?------->", userCoords.latitude);
+    //console.log("Latitude?------->", userCoords.latitude);
 
     if (userCoords && userCoords.latitude) {
       getNearlyShops();
       //setDefaultValues();
       //console.log("SHOPS----------", userCoords);
       let array = shops.map((shop) => {
-        console.log("SHOP------>", shop);
-        console.log("COOOORDSSSSSSSS", shop.coords);
+        //console.log("SHOP------>", shop);
+        //console.log("COOOORDSSSSSSSS", shop.coords);
         ({
           ...shop,
           isSelected: false,
@@ -117,10 +117,10 @@ function MapScreen({ route, navigation }) {
   }, [selectedShops]);
 
   const setDefaultValues = () => {
-    console.log("SHOPS----------", userCoords);
+    //console.log("SHOPS----------", userCoords);
     let array = shops.map((shop) => {
-      console.log("SHOP------>", shop);
-      console.log("COOOORDSSSSSSSS", shop.coords);
+      // console.log("SHOP------>", shop);
+      // console.log("COOOORDSSSSSSSS", shop.coords);
       ({
         ...shop,
         isSelected: false,
@@ -137,10 +137,10 @@ function MapScreen({ route, navigation }) {
       latitude: userCoords.latitude,
       longitude: userCoords.longitude,
     };
-    console.log("SHOPS----------", shops);
+    // console.log("SHOPS----------", shops);
     shops.forEach((store) => {
       let distance = getDistance(store.coords, userCoordsLatLon);
-      console.log("Store coords----------------", store.coords);
+      // console.log("Store coords----------------", store.coords);
       if (distance <= radius) {
         nearShops.push({
           ...store,
@@ -310,7 +310,7 @@ function MapScreen({ route, navigation }) {
       }
       return { ...shop, isSelected: false };
     });
-    console.log('updatedShops--->', updatedShops);
+    //console.log('updatedShops--->', updatedShops);
 
 
     setShops(updatedShops);
@@ -319,9 +319,9 @@ function MapScreen({ route, navigation }) {
   };
   //HAY QUE HACER CONSOLE LOG DE LAS VARIABLES QUE MANEJA LA LINEA 291 
   const handleSwiperIndexChange = (currentIndex) => {
-    console.log("SelectedShops------------------", selectedShops);
+    //console.log("SelectedShops------------------", selectedShops);
     const moveToShop = selectedShops[currentIndex];
-    console.log("MoveToShop------------------", moveToShop);
+    //console.log("MoveToShop------------------", moveToShop);
     handlePropertyChange(moveToShop.name);
     setCurrentIndex(currentIndex);
 
